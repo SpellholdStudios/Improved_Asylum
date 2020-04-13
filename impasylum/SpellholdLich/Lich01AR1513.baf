@@ -1,0 +1,7 @@
+IF
+Global("Lich01Exists","AR1513",0)
+THEN
+RESPONSE #100
+SetGlobal("Lich01Exists","AR1513",1)
+CreateCreature("Lich01",[1658.1862],3)
+END

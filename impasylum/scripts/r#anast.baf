@@ -1,0 +1,116 @@
+// Causes Anastacia to defend herself if she is attacked
+IF
+  !Allegiance(Myself,ENEMY)
+  AttackedBy([PC],DEFAULT)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  CheckStatLT(Myself,1,STONESKINS)
+  Global("Ironskin","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Ironskin","LOCALS",1)
+    ForceSpellRES("SPPR506",Myself)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(NearestEnemyOfType([0.0.0.FIGHTER_ALL]))
+  Global("Insects","LOCALS",0)
+  !HasBounceEffects(NearestEnemyOfType([0.0.0.FIGHTER_ALL]))
+  !HasImmunityEffects(NearestEnemyOfType([0.0.0.FIGHTER_ALL]))
+THEN
+  RESPONSE #100
+    SetGlobal("Insects","LOCALS",1)
+    ForceSpell(NearestEnemyOfType([0.0.0.FIGHTER_ALL]),CLERIC_INSECT_PLAGUE)
+END
+
+IF
+  Dead("R#Breu01")
+  Global("taunt","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("taunt","LOCALS",1)
+    DisplayStringHead(Myself,@84)
+    Attack(LastAttackerOf("R#Breu01"))
+END
+
+IF
+  HPPercentLT("R#Thorde",50)
+THEN
+  RESPONSE #100
+    Attack(LastAttackerOf("R#Thorde"))
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  CheckStatLT(NearestEnemyOf(Myself),10,CHR)
+  CheckStatLT(NearestEnemyOf(Myself),3,STONESKINS)
+THEN
+  RESPONSE #100
+    AttackReevaluate(NearestEnemyOf(Myself),60)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  CheckStatLT(SecondNearestEnemyOf(Myself),10,CHR)
+  CheckStatLT(SecondNearestEnemyOf(Myself),3,STONESKINS)
+THEN
+  RESPONSE #100
+    AttackReevaluate(SecondNearestEnemyOf(Myself),60)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),10,CHR)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),3,STONESKINS)
+THEN
+  RESPONSE #100
+    AttackReevaluate(ThirdNearestEnemyOf(Myself),60)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  CheckStatLT(FourthNearestEnemyOf(Myself),10,CHR)
+  CheckStatLT(FourthNearestEnemyOf(Myself),3,STONESKINS)
+THEN
+  RESPONSE #100
+    AttackReevaluate(FourthNearestEnemyOf(Myself),60)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  CheckStatLT(FifthNearestEnemyOf(Myself),10,CHR)
+  CheckStatLT(FifthNearestEnemyOf(Myself),3,STONESKINS)
+THEN
+  RESPONSE #100
+    AttackReevaluate(FifthNearestEnemyOf(Myself),60)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  CheckStatLT(SixthNearestEnemyOf(Myself),10,CHR)
+  CheckStatLT(SixthNearestEnemyOf(Myself),3,STONESKINS)
+THEN
+  RESPONSE #100
+    AttackReevaluate(SixthNearestEnemyOf(Myself),60)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+THEN
+  RESPONSE #100
+    AttackReevaluate(NearestEnemyOf(Myself),60)
+END
+
+IF
+  PartyRested()
+THEN
+  RESPONSE #100
+    SetGlobal("Ironskin","LOCALS",0)
+    SetGlobal("Insects","LOCALS",0)
+END

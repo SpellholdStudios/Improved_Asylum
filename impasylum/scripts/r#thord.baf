@@ -1,0 +1,139 @@
+// Thordek Combat Script
+// Version 2.0
+
+/* Potion Handling and Sharing */
+IF
+ HPPercentLT(Myself,50)
+ HasItem("potn55",Myself) /* Potion of Superior Healing */
+THEN
+ RESPONSE #100
+  DisplayStringHead(Myself,@1)
+  UseItem("potn55",Myself)
+  Continue()
+END
+
+IF
+ HPPercentLT(Myself,50)
+ !HasItem("potn55",Myself)
+ !GlobalTimerNotExpired("Shout","LOCALS")
+ OR(3)
+  See("R#Drusil01")
+  See("R#Anast")
+  See("R#Breu01")
+THEN
+ RESPONSE #100
+  RealSetGlobalTimer("Shout","LOCALS",6)
+  DisplayStringHead(Myself,@2)
+  Shout(NEEDPOTION)
+END
+
+IF
+ HPPercentGT(Myself,50)
+ Heard([EVILCUTOFF],NEEDPOTION)
+ !HasItem("potn55",LastHeardBy(Myself))
+ HasItem("potn55",Myself)
+THEN
+ RESPONSE #100
+  DisplayStringHead(Myself,@3)
+  GiveItem("potn55",LastHeardBy(Myself))
+END
+
+/* Combat Code */
+IF
+ See(NearestEnemyOfType([PC]))
+THEN
+ RESPONSE #100
+END
+
+IF
+ See(NearestEnemyOfType([0.0.0.FIGHTER]))
+THEN
+ RESPONSE #100
+END
+
+IF
+ See(NearestEnemyOfType([0.0.0.RANGER]))
+THEN
+ RESPONSE #100
+END
+
+IF
+ See(NearestEnemyOfType([0.0.0.PALADIN]))
+THEN
+ RESPONSE #100
+END
+
+IF
+ See(NearestEnemyOfType([0.0.0.CLERIC]))
+THEN
+ RESPONSE #100
+END
+
+IF
+ See(NearestEnemyOfType([0.0.ELF]))
+THEN
+ RESPONSE #100
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+THEN
+ RESPONSE #100
+  AttackReevaluate(LastSeenBy(Myself),90)
+END
+
+/*
+IF
+  Race(Player1,ELF)
+  Allegiance(Myself,ENEMY)
+  See(Player1)
+THEN
+  RESPONSE #100
+    Attack(Player1)
+END
+
+IF
+  Race(Player2,ELF)
+  Allegiance(Myself,ENEMY)
+  See(Player2)
+THEN
+  RESPONSE #100
+    Attack(Player2)
+END
+
+IF
+  Race(Player3,ELF)
+  Allegiance(Myself,ENEMY)
+  See(Player3)
+THEN
+  RESPONSE #100
+    Attack(Player3)
+END
+
+IF
+  Race(Player4,ELF)
+  Allegiance(Myself,ENEMY)
+  See(Player4)
+THEN
+  RESPONSE #100
+    Attack(Player4)
+END
+
+IF
+  Race(Player5,ELF)
+  Allegiance(Myself,ENEMY)
+  See(Player5)
+THEN
+  RESPONSE #100
+    Attack(Player5)
+END
+
+IF
+  Race(Player6,ELF)
+  Allegiance(Myself,ENEMY)
+  See(Player6)
+THEN
+  RESPONSE #100
+    Attack(Player6)
+END
+*/

@@ -1,0 +1,37 @@
+IF
+  Global("R#IWDPartyExists","AR1513",0)
+THEN
+  RESPONSE #100
+    SetGlobal("R#IWDPartyExists","AR1513",1)
+    CreateCreature("R#Anast",[2793.1095],8)  // <Invalid Strref 74896>
+    CreateCreature("R#Breu01",[2924.1190],8)  // <Invalid Strref 74899>
+    CreateCreature("R#Drus01",[2927.1019],8)  // <Invalid Strref 74898>
+    CreateCreature("R#Dwarf",[3033.1133],8)  // <Invalid Strref 74897>
+END
+
+IF
+  Global("R#MagesSpawn","AR1513",0)
+THEN
+  RESPONSE #100
+    SetGlobal("R#MagesSpawn","AR1513",1)
+    CreateCreature("R#mage01",[1065.761],0)  // ~Kargak the Destroyer~
+    CreateCreature("R#mage02",[781.948],0)  // <Invalid Strref 74900>
+END
+
+IF
+  Global("R#LichSpawn","AR1513",0)
+THEN
+  RESPONSE #100
+    SetGlobal("R#LichSpawn","AR1513",1)
+    CreateCreature("Lich01",[1586.1949],13)  // ~Lich~
+END
+
+IF
+  Global("R#DemonSpawn","AR1513",0)
+THEN
+  RESPONSE #100
+    SetGlobal("R#DemonSpawn","AR1513",1)
+    CreateCreature("r#demon",[1180.1251],12)  // r#demon
+    CreateCreature("r#demon",[1504.1030],4)  // r#demon
+END
+

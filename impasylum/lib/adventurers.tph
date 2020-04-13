@@ -1,0 +1,71 @@
+/* Macros for Adding Spells to Adventurer Party
+ * Author: Rastor
+ * Version: 0.98 */
+
+// Breudayael
+DEFINE_PATCH_MACRO ~Breudayael_Spells~ BEGIN
+ LOCAL_SET "time_stop" = 4
+ LOCAL_SET "wilting" = 3
+ LOCAL_SET "lower_resistance" = 4
+ LOCAL_SET "dispel" = 4
+ WHILE ("%time_stop%" > 0) BEGIN
+  ADD_KNOWN_SPELL ~spwi909~ #8 ~wizard~ // Time Stop
+  SET "time_stop" = ("%time_stop%" - 1)
+ END
+ WHILE ("%wilting%" > 0) BEGIN
+  ADD_KNOWN_SPELL ~spwi812~ #7 ~wizard~ // Abi Dalzim's Horrid Wilting
+  SET "wilting" = ("%wilting%" - 1)
+ END
+ WHILE ("%lower_resistance%" > 0) BEGIN
+  ADD_KNOWN_SPELL ~spwi514~ #4 ~wizard~ // Lower Resistance
+  SET "lower_resistance" = ("%lower_resistance%" - 1)
+ END
+ ADD_KNOWN_SPELL ~spwi913~ #8 ~wizard~ // Wail of the Banshee
+ ADD_KNOWN_SPELL ~spwi903~ #8 ~wizard~ // Spellstrike
+ ADD_KNOWN_SPELL ~spwi605~ #5 ~wizard~ // Death Spell
+ ADD_KNOWN_SPELL ~spwi508~ #4 ~wizard~ // Chaos
+ ADD_KNOWN_SPELL ~spwi713~ #6 ~wizard~ // Finger of Death
+ ADD_KNOWN_SPELL ~spwi716~ #6 ~wizard~ // Mordenkainen's Sword
+ ADD_KNOWN_SPELL ~spwi804~ #7 ~wizard~ // Simulacrum
+ ADD_KNOWN_SPELL ~spwi506~ #4 ~wizard~ // Domination
+ WHILE ("%dispel%" > 0) BEGIN
+  ADD_KNOWN_SPELL ~spwi326~ #2 ~wizard~ // Dispel Magic
+  SET "dispel" = ("%dispel%" - 1)
+ END
+ ADD_KNOWN_SPELL ~spwi813~ #7 ~wizard~ // Maze
+ ADD_KNOWN_SPELL ~spwi506~ #4 ~wizard~ // Domination
+ ADD_KNOWN_SPELL ~spwi306~ #2 ~wizard~ // Hold Person
+ ADD_KNOWN_SPELL ~spwi523~ #4 ~wizard~ // Sunfire
+ ADD_KNOWN_SPELL ~spwi925~ #8 ~wizard~ // Comet
+ ADD_KNOWN_SPELL ~spwi902~ #8 ~wizard~ // Spell Trap
+ ADD_KNOWN_SPELL ~spwi910~ #8 ~wizard~ // Imprisonment
+ ADD_KNOWN_SPELL ~spwi911~ #8 ~wizard~ // Meteor Swarm
+ ADD_KNOWN_SPELL ~spwi914~ #8 ~wizard~ // Energy Drain
+ ADD_KNOWN_SPELL ~spwi716~ #6 ~wizard~ // Mordenkainen's Sword
+END
+
+// Drusilia
+DEFINE_PATCH_MACRO ~Drusilia_Spells~ BEGIN
+ LOCAL_SET "wilting" = 2
+ LOCAL_SET "lower_resistance" = 3
+ WHILE ("%wilting%" > 0) BEGIN
+  ADD_KNOWN_SPELL ~spwi812~ #7 ~wizard~ // Abi Dalzim's Horrid Wilting
+  SET "wilting" = ("%wilting%" - 1)
+ END
+ ADD_KNOWN_SPELL ~spwi909~ #8 ~wizard~ // Time Stop
+ ADD_KNOWN_SPELL ~spwi326~ #2 ~wizard~ // Dispel Magic
+ WHILE ("%lower_resistance%" > 0) BEGIN
+  ADD_KNOWN_SPELL ~spwi514~ #4 ~wizard~ // Lower Resistance
+  SET "lower_resistance" = ("%lower_resistance%" - 1)
+ END
+ ADD_KNOWN_SPELL ~spwi412~ #3 ~wizard~ // Greater Malison
+ ADD_KNOWN_SPELL ~spwi716~ #6 ~wizard~ // Mordenkainen's Sword
+ ADD_KNOWN_SPELL ~spwi604~ #5 ~wizard~ // Flesh to Stone
+ ADD_KNOWN_SPELL ~spwi523~ #4 ~wizard~ // Sunfire
+ ADD_KNOWN_SPELL ~spwi303~ #2 ~wizard~ // Flame Arrow
+ ADD_KNOWN_SPELL ~spwi616~ #5 ~wizard~ // Disintegrate
+ ADD_KNOWN_SPELL ~spwi211~ #1 ~wizard~ // Melf's Acid Arrow
+ ADD_KNOWN_SPELL ~spwi609~ #5 ~wizard~ // True Seeing
+ ADD_KNOWN_SPELL ~spwi910~ #8 ~wizard~ // Imprisonment
+ ADD_KNOWN_SPELL ~spwi508~ #4 ~wizard~ // Chaos
+END

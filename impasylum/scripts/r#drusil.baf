@@ -1,0 +1,399 @@
+IF
+ Allegiance(Myself,ENEMY)
+ Global("Protections","LOCALS",0)
+THEN
+ RESPONSE #100
+  SetGlobal("Protections","LOCALS",1)
+  ApplySpell(Myself,WIZARD_STONE_SKIN)
+  ApplySpell(Myself,WIZARD_SPELL_TRAP)
+  ApplySpell(Myself,WIZARD_SPELL_TURNING)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOf(Myself))
+ Global("FightProtections","LOCALS",0)
+THEN
+ RESPONSE #100
+  SetGlobal("FightProtections","LOCALS",1)
+  ApplySpell(Myself,WIZARD_ABSOLUTE_IMMUNITY)
+  ApplySpell(Myself,WIZARD_SPELL_IMMUNITY_ABJURATION)
+  ApplySpell(Myself,WIZARD_SPELL_IMMUNITY_DIVINATION)
+END
+
+// Chain Contingency
+IF
+ HPPercentLT(Myself,50)
+ Global("ChainContingency","LOCALS",0)
+THEN
+ RESPONSE #100
+  SetGlobal("ChainContingency","LOCALS",1)
+  DisplayString(Myself,@63)
+  DisplayString(Myself,@80)
+  ApplySpell(Myself,WIZARD_BLUR)
+  DisplayString(Myself,@78)
+  ApplySpell(Myself,WIZARD_STONE_SKIN)
+  DisplayString(Myself,@81)
+  ApplySpell(Myself,WIZARD_ABSOLUTE_IMMUNITY)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOf(Myself))
+ !GlobalTimerNotExpired("Cast","LOCALS")
+ HaveSpell(WIZARD_ABI_DALZIMS_HORRID_WILTING)
+THEN
+ RESPONSE #100
+  IncrementGlobal("Wilting","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(NearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)
+  Continue()
+END
+
+IF
+ OR(2)
+  Difficulty(HARD)
+  Difficulty(HARDEST)
+ Allegiance(Myself,ENEMY)
+ CombatCounterGT(0)
+ See(NearestEnemyOf(Myself))
+ HaveSpell(WIZARD_TIME_STOP)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  SetGlobal("Timestop","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(Myself,WIZARD_TIME_STOP)
+END
+
+IF
+ Global("Invis","LOCALS",0)
+ See(NearestEnemyOf(Myself))
+ Allegiance(Myself,ENEMY)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  SetGlobal("Invis","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  DisplayString(Myself,@64)
+  DisplayString(Myself,@82)
+  ReallyForceSpell(Myself,WIZARD_SHADOW_DOOR)
+  DisplayString(Myself,@65)
+  ReallyForceSpell(Myself,WIZARD_TRUE_SIGHT)
+  DisplayString(Myself,@83)
+  ReallyForceSpell(Myself,WIZARD_SPELL_SHIELD)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ HaveSpell(WIZARD_ABI_DALZIMS_HORRID_WILTING)
+ See(NearestEnemyOfType([PC]))
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  IncrementGlobal("Wilting","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(NearestEnemyOfType([PC]),WIZARD_ABI_DALZIMS_HORRID_WILTING)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOf(Myself))
+ HaveSpell(WIZARD_DISPEL_MAGIC)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(NearestEnemyOf(Myself),WIZARD_DISPEL_MAGIC)
+END
+
+// Lower Resistance
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOf(Myself))
+ CheckStatGT(NearestEnemyOf(Myself),30,RESISTMAGIC)
+ HaveSpell(WIZARD_LOWER_RESISTANCE)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  IncrementGlobal("LowerResist","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(NearestEnemyOf(Myself),WIZARD_LOWER_RESISTANCE)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See(SecondNearestEnemyOf(Myself))
+ CheckStatGT(SecondNearestEnemyOf(Myself),30,RESISTMAGIC)
+ HaveSpell(WIZARD_LOWER_RESISTANCE)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  IncrementGlobal("LowerResist","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(SecondNearestEnemyOf(Myself),WIZARD_LOWER_RESISTANCE)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See(ThirdNearestEnemyOf(Myself))
+ CheckStatGT(ThirdNearestEnemyOf(Myself),30,RESISTMAGIC)
+ HaveSpell(WIZARD_LOWER_RESISTANCE)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  IncrementGlobal("LowerResist","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(ThirdNearestEnemyOf(Myself),WIZARD_LOWER_RESISTANCE)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See(FourthNearestEnemyOf(Myself))
+ CheckStatGT(FourthNearestEnemyOf(Myself),30,RESISTMAGIC)
+ HaveSpell(WIZARD_LOWER_RESISTANCE)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  IncrementGlobal("LowerResist","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(FourthNearestEnemyOf(Myself),WIZARD_LOWER_RESISTANCE)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See(FifthNearestEnemyOf(Myself))
+ CheckStatGT(FifthNearestEnemyOf(Myself),30,RESISTMAGIC)
+ HaveSpell(WIZARD_LOWER_RESISTANCE)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  IncrementGlobal("LowerResist","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(FifthNearestEnemyOf(Myself),WIZARD_LOWER_RESISTANCE)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See(SixthNearestEnemyOf(Myself))
+ CheckStatGT(SixthNearestEnemyOf(Myself),30,RESISTMAGIC)
+ HaveSpell(WIZARD_LOWER_RESISTANCE)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  IncrementGlobal("LowerResist","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(SixthNearestEnemyOf(Myself),WIZARD_LOWER_RESISTANCE)
+END
+
+// Greater Malison
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOf(Myself))
+ HaveSpell(WIZARD_GREATER_MALISON)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  SetGlobal("Malison","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(NearestEnemyOf(Myself),WIZARD_GREATER_MALISON)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ HaveSpell(WIZARD_MORDENKAINENS_SWORD)
+ See(NearestEnemyOfType([PC]))
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  SetGlobal("Mordy","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(LastSeenBy(Myself),WIZARD_MORDENKAINENS_SWORD)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ HaveSpell(WIZARD_FLESH_TO_STONE)
+ See(NearestEnemyOfType([PC]))
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  SetGlobal("Stoned","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(NearestEnemyOfType([PC]),WIZARD_FLESH_TO_STONE)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ Global("Damager","LOCALS",0)
+ RandomNum(4,1)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+ HaveSpell(WIZARD_SUN_FIRE)
+THEN
+ RESPONSE #100
+  SetGlobal("Damager","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(Myself,WIZARD_SUN_FIRE)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOfType([PC]))
+ Global("Damager","LOCALS",0)
+ RandomNum(4,2)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+ HaveSpell(WIZARD_FLAME_ARROW)
+THEN
+ RESPONSE #100
+  SetGlobal("Damager","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(NearestEnemyOfType([PC]),WIZARD_FLAME_ARROW)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOfType([PC]))
+ Global("Damager","LOCALS",0)
+ RandomNum(4,3)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+ HaveSpell(WIZARD_DISINTEGRATE)
+THEN
+ RESPONSE #100
+  SetGlobal("Damager","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(NearestEnemyOfType([PC]),WIZARD_DISINTEGRATE)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOfType([PC]))
+ Global("Damager","LOCALS",0)
+ RandomNum(4,4)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+ HaveSpell(WIZARD_MELF_ACID_ARROW)
+THEN
+ RESPONSE #100
+  SetGlobal("Damager","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(NearestEnemyOfType([PC]),WIZARD_MELF_ACID_ARROW)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ OR(6)
+  StateCheck(Player1,STATE_INVISIBLE)
+  StateCheck(Player2,STATE_INVISIBLE)
+  StateCheck(Player3,STATE_INVISIBLE)
+  StateCheck(Player4,STATE_INVISIBLE)
+  StateCheck(Player5,STATE_INVISIBLE)
+  StateCheck(Player6,STATE_INVISIBLE)
+ HaveSpell(WIZARD_TRUE_SIGHT)
+ OR(6)
+  Detect(Player1)
+  Detect(Player2)
+  Detect(Player3)
+  Detect(Player4)
+  Detect(Player5)
+  Detect(Player6)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  SetGlobal("TrueSeeing","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(Myself,WIZARD_TRUE_SIGHT)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOfType([PC]))
+ Difficulty(HARDEST)
+ !HasBounceEffects(NearestEnemyOfType([PC]))
+ !HasImmunityEffects(NearestEnemyOfType([PC]))
+ HaveSpell(WIZARD_IMPRISONMENT)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  SetGlobal("Imprisonment","LOCALS",1)
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(NearestEnemyOfType([PC]),WIZARD_IMPRISONMENT)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOf(Myself))
+ CheckStatGT(NearestEnemyOf(Myself),1,SAVEVSSPELL)
+ !HasItemEquiped("AMUL17",LastSeenBy(Myself))
+ !HasItemEquiped("LEAT20",LastSeenBy(Myself))
+ !HasItemEquiped("SHLD25",LastSeenBy(Myself))
+ !HasItemEquipedReal("SW1H54",LastSeenBy(Myself))
+ !HasItemEquipedReal("SW2H14",LastSeenBy(Myself))
+ !HasItemEquipedReal("SW2H21",LastSeenBy(Myself))
+ HaveSpell(WIZARD_CHAOS)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  SetGlobalTimer("Cast","LOCALS",6)
+  Spell(NearestEnemyOf(Myself),WIZARD_CHAOS)
+END
+
+IF
+ OR(4)
+  StateCheck("R#Anast",STATE_SLEEPING)
+  StateCheck("R#Anast",STATE_CHARMED)
+  StateCheck("R#Anast",STATE_STUNNED)
+  StateCheck("R#Anast",STATE_PANIC)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  SetGlobalTimer("Cast","LOCALS",6)
+  SpellNoDec("R#Anast",WIZARD_DISPEL_MAGIC)
+END
+
+IF
+ OR(4)
+  StateCheck("R#Thorde",STATE_SLEEPING)
+  StateCheck("R#Thorde",STATE_CHARMED)
+  StateCheck("R#Thorde",STATE_STUNNED)
+  StateCheck("R#Thorde",STATE_PANIC)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  SetGlobalTimer("Cast","LOCALS",6)
+  SpellNoDec("R#Thorde",WIZARD_DISPEL_MAGIC)
+END
+
+IF
+ OR(4)
+  StateCheck("R#Breu01",STATE_SLEEPING)
+  StateCheck("R#Breu01",STATE_CHARMED)
+  StateCheck("R#Breu01",STATE_STUNNED)
+  StateCheck("R#Breu01",STATE_PANIC)
+ !GlobalTimerNotExpired("Cast","LOCALS")
+THEN
+ RESPONSE #100
+  SetGlobalTimer("Cast","LOCALS",6)
+  SpellNoDec("R#Breu01",WIZARD_DISPEL_MAGIC)
+END
+
+IF
+ !Detect(NearestEnemyOf(Myself))
+ CombatCounter(0)
+ Allegiance(Myself,ENEMY)
+THEN
+ RESPONSE #100
+  SetGlobal("Protections","LOCALS",0)
+  SetGlobal("FightProtections","LOCALS",0)
+  SetGlobal("ChainContigency","LOCALS",0)
+  Rest()
+END
+
+IF
+ CombatCounter(0)
+ PartyRested()
+THEN
+ RESPONSE #100
+  SetGlobal("Protections","LOCALS",0)
+  SetGlobal("FightProtections","LOCALS",0)
+  SetGlobal("ChainContigency","LOCALS",0)
+  Rest()
+END

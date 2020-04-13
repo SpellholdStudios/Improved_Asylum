@@ -1,0 +1,500 @@
+IF
+  ActionListEmpty()
+  HPPercentLT(Player1,10)
+  HaveSpell(CLERIC_HEAL)
+THEN
+  RESPONSE #100
+    Spell(Player1,CLERIC_HEAL)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player2,10)
+  HaveSpell(CLERIC_HEAL)
+THEN
+  RESPONSE #100
+    Spell(Player2,CLERIC_HEAL)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player3,10)
+  HaveSpell(CLERIC_HEAL)
+THEN
+  RESPONSE #100
+    Spell(Player3,CLERIC_HEAL)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player4,10)
+  HaveSpell(CLERIC_HEAL)
+THEN
+  RESPONSE #100
+    Spell(Player4,CLERIC_HEAL)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player5,10)
+  HaveSpell(CLERIC_HEAL)
+THEN
+  RESPONSE #100
+    Spell(Player5,CLERIC_HEAL)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player6,10)
+  HaveSpell(CLERIC_HEAL)
+THEN
+  RESPONSE #100
+    Spell(Player6,CLERIC_HEAL)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player1,50)
+  HaveSpell(CLERIC_CURE_CRITICAL_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player1,CLERIC_CURE_CRITICAL_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player2,50)
+  HaveSpell(CLERIC_CURE_CRITICAL_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player2,CLERIC_CURE_CRITICAL_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player3,50)
+  HaveSpell(CLERIC_CURE_CRITICAL_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player3,CLERIC_CURE_CRITICAL_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player4,50)
+  HaveSpell(CLERIC_CURE_CRITICAL_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player4,CLERIC_CURE_CRITICAL_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player5,50)
+  HaveSpell(CLERIC_CURE_CRITICAL_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player5,CLERIC_CURE_CRITICAL_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player6,50)
+  HaveSpell(CLERIC_CURE_CRITICAL_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player6,CLERIC_CURE_CRITICAL_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player1,50)
+  HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player1,CLERIC_CURE_SERIOUS_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player2,50)
+  HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player2,CLERIC_CURE_SERIOUS_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player3,50)
+  HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player3,CLERIC_CURE_SERIOUS_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player4,50)
+  HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player4,CLERIC_CURE_SERIOUS_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player5,50)
+  HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player5,CLERIC_CURE_SERIOUS_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player6,50)
+  HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player6,CLERIC_CURE_SERIOUS_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player1,60)
+  HaveSpell(CLERIC_CURE_MEDIUM_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player1,CLERIC_CURE_MEDIUM_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player2,60)
+  HaveSpell(CLERIC_CURE_MEDIUM_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player2,CLERIC_CURE_MEDIUM_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player3,60)
+  HaveSpell(CLERIC_CURE_MEDIUM_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player3,CLERIC_CURE_MEDIUM_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player4,60)
+  HaveSpell(CLERIC_CURE_MEDIUM_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player4,CLERIC_CURE_MEDIUM_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player5,60)
+  HaveSpell(CLERIC_CURE_MEDIUM_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player5,CLERIC_CURE_MEDIUM_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player6,60)
+  HaveSpell(CLERIC_CURE_MEDIUM_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player6,CLERIC_CURE_MEDIUM_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player1,60)
+  HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player1,CLERIC_CURE_LIGHT_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player2,60)
+  HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player2,CLERIC_CURE_LIGHT_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player3,60)
+  HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player3,CLERIC_CURE_LIGHT_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player4,60)
+  HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player4,CLERIC_CURE_LIGHT_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player5,60)
+  HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player5,CLERIC_CURE_LIGHT_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  HPPercentLT(Player6,60)
+  HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Player6,CLERIC_CURE_LIGHT_WOUNDS)
+END
+
+IF
+  ActionListEmpty()
+  StateCheck(Player1,STATE_CONFUSED)
+  HaveSpell(CLERIC_CHAOTIC_COMMANDS)
+THEN
+  RESPONSE #100
+    Spell(Player1,CLERIC_CHAOTIC_COMMANDS)
+END
+
+IF
+  ActionListEmpty()
+  StateCheck(Player2,STATE_CONFUSED)
+  HaveSpell(CLERIC_CHAOTIC_COMMANDS)
+THEN
+  RESPONSE #100
+    Spell(Player2,CLERIC_CHAOTIC_COMMANDS)
+END
+
+IF
+  ActionListEmpty()
+  StateCheck(Player3,STATE_CONFUSED)
+  HaveSpell(CLERIC_CHAOTIC_COMMANDS)
+THEN
+  RESPONSE #100
+    Spell(Player3,CLERIC_CHAOTIC_COMMANDS)
+END
+
+IF
+  ActionListEmpty()
+  StateCheck(Player4,STATE_CONFUSED)
+  HaveSpell(CLERIC_CHAOTIC_COMMANDS)
+THEN
+  RESPONSE #100
+    Spell(Player4,CLERIC_CHAOTIC_COMMANDS)
+END
+
+IF
+  ActionListEmpty()
+  StateCheck(Player5,STATE_CONFUSED)
+  HaveSpell(CLERIC_CHAOTIC_COMMANDS)
+THEN
+  RESPONSE #100
+    Spell(Player6,CLERIC_CHAOTIC_COMMANDS)
+END
+
+IF
+  ActionListEmpty()
+  StateCheck(Player6,STATE_CONFUSED)
+  HaveSpell(CLERIC_CHAOTIC_COMMANDS)
+THEN
+  RESPONSE #100
+    Spell(Player6,CLERIC_CHAOTIC_COMMANDS)
+END
+
+IF
+  ActionListEmpty()
+  HaveSpell(CLERIC_SILENCE_15_FOOT)
+  OR(2)
+    See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
+  Range(LastSeenBy(Myself),25)
+  !StateCheck(LastSeenBy(Myself),STATE_SILENCED)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)
+END
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_FLAME_STRIKE)
+  HPGT(LastSeenBy(Myself),20)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),CLERIC_FLAME_STRIKE)
+END
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_RIGID_THINKING)
+  !StateCheck(NearestEnemyOf(Myself),STATE_CONFUSED)
+  HPGT(NearestEnemyOf(Myself),20)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),CLERIC_RIGID_THINKING)
+END
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_BOLT_OF_GLORY)
+  HPGT(NearestEnemyOf(Myself),20)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),CLERIC_BOLT_OF_GLORY)
+END
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_CONFUSION)
+  !StateCheck(NearestEnemyOf(Myself),STATE_CONFUSED)
+  HPGT(NearestEnemyOf(Myself),20)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),CLERIC_CONFUSION)
+END
+
+IF
+  ActionListEmpty()
+  Detect([ENEMY])
+  !See(LastSeenBy(Myself))
+  Range(LastSeenBy(Myself),10)
+  HaveSpell(WIZARD_TRUE_SIGHT)
+THEN
+  RESPONSE #100
+    Spell(Myself,WIZARD_TRUE_SIGHT)
+END
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_AERIAL_SERVANT)
+  HPGT(NearestEnemyOf(Myself),40)
+THEN
+  RESPONSE #100
+    Spell(Myself,CLERIC_AERIAL_SERVANT)
+END
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_ANIMAL_SUMMONING_3)
+  HPGT(NearestEnemyOf(Myself),20)
+  Global("Animals","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Animals","LOCALS",1)
+    Spell(Myself,CLERIC_ANIMAL_SUMMONING_3)
+END
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_ANIMAL_SUMMONING_2)
+  HPGT(NearestEnemyOf(Myself),20)
+  Global("Animals","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Animals","LOCALS",1)
+    Spell(Myself,CLERIC_ANIMAL_SUMMONING_2)
+END
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_ANIMAL_SUMMONING_1)
+  HPGT(NearestEnemyOf(Myself),20)
+  Global("Animals","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Animals","LOCALS",1)
+    Spell(Myself,CLERIC_ANIMAL_SUMMONING_1)
+END
+
+IF
+  CombatCounter(0)
+  Global("Animals","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Animals","LOCALS",0)
+END
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_MENTAL_DOMINATION)
+  !StateCheck(LastSeenBy(Myself),STATE_STUNNED)
+  !HasBounceEffects(LastSeenBy(Myself))
+  HPGT(LastSeenBy(Myself),20)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),CLERIC_MENTAL_DOMINATION)
+END
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_FLAME_BLADE)
+  !HasItem("FBLADE",Myself)  // ~Flame Blade~
+  !HasItem("SHILLE",Myself)  // ~Shillelagh~
+  !HasItem("SHAMMR",Myself)  // ~Spiritual Hammer~
+  !HasItem("CHILLT",Myself)  // ~Chill Touch~
+  !HasItem("GHOULT",Myself)  // ~Ghoul Touch~
+  !HasItem("SGRASP",Myself)  // ~Shocking Grasp~
+  HPGT(LastSeenBy(Myself),20)
+THEN
+  RESPONSE #100
+    Spell(Myself,CLERIC_FLAME_BLADE)
+END
+
+IF
+  ActionListEmpty()
+  Help([PC])
+THEN
+  RESPONSE #100
+    AttackReevaluate(LastAttackerOf(LastHelp(Myself)),60)
+END
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),4)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  !Range(NearestEnemyOf(Myself),4)
+THEN
+  RESPONSE #100
+    EquipRanged()
+    AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+

@@ -1,0 +1,452 @@
+@0	= ~Mod Asile Ameliore pour BG2 : ToB~
+@1	= ~Épée Longue~ 
+@2	= ~Fléau des Bardes +5~
+@3	= ~Fléau des Bardes +5
+Cette arme fut forgée par le Zentharim afin d'être utilisée en cas de conflit avec les Ménestrels. Elle ne fut cependant jamais utilisée, car cette guerre qu'on avait prédit n'a jamais eu lieu. On ignore comment cette arme a quitté la Forteresse du Zhentarim, mais on pense qu'un voleur l'a dérobé après avoir assisté à une piètre représentation du "Songe d'une Nuit d'été". Cette théorie est basée sur le fait que l'un des acteurs les plus charismatiques avait été retrouvé mort, toute trace avenante ayant disparu de son visage. L'acteur connut les funérailles typiques d'un mendiant.
+
+PARAMETRES :
+
+TAC0 : +5
+Protection contre les Bardes : 
+ +10% de Résistance à la Magie
+ Immunité contre Flèche enflammée
+Dégâts : 1D8 +5
+Facteur de Vitesse : 0
+Draine 3 points de Charisme à chaque coup
+
+Inutilisable par :
+ Mage
+ Clerc
+ Barde
+ Druide~
+@4	= ~Ces épées sont généralement appelées épées à double tranchant, épées de guerre ou épées militaires. Souvent, l'épée longue a une lame à simple tranchant. Le modèle et la longueur de l'épée varient d'un peuple à un autre, parfois même d'une époque à une autre. L'une des caractéristiques communes à toutes les épées de ce type est la longueur, comprise entre 90 cm et 1,20 m. Dans le cas des épées les plus longues, la lame couvre 1 m de la longueur totale. La plupart des épées longues ont une lame à double tranchant et un estoc pointu. Malgré son estoc, l'épée longue est une arme considérée comme tranchante, et non perforante. 
+
+PARAMETRES :
+
+Dégâts : 1D8
+Type de dégâts : tranchant
+Poids : 4
+Facteur de vitesse : 5
+Type de compétence : Epée longue
+Type : arme à 1 main
+Force requise : 6
+Non utilisable par :
+ Druide
+ Clerc
+ Mage~
+@5	= ~Coeur de Braldain +5~
+@6	= ~Coeur de Braldain +5
+Braldain était un nécromancien elfe de sinistre réputation, qui connut une histoire particulièrement douloureuse. Il parvint à accumuler de grands pouvoirs en traversant les continents, mais bien peu connaissent la douleur que portait son coeur.
+
+Braldain a longtemps été tourmenté par le souvenir de nombreuses femmes elfes, et ceci fut l'origine de sa perte. Finalement, il commença à torturer les rares vierges qu'il trouva près de sa contrée natale afin d'obtenir leurs énergies vitales pour pouvoir lancer le plus puissant de tous les sorts de nécromancie.
+
+Ce qui causa sa perte reste pure spéculation, mais la rumeur prétend qu'il était impliqué dans une quête pour obtenir un pouvoir encore supérieur lorsqu'il disparut. Cette épée est tout ce qu'il reste de son héritage, et quel héritage ! Elle contient l'essence du coeur noir du nécromancien, déchiré par les souvenirs de toutes les horribles tortures qu'il a infligées à ces femmes.
+
+PARAMETRES :
+
+Immunité : Poison
+TAC0 : +5
+Dégâts : 1D8 +5
+Dégâts Électriques : +5
+Dégâts de Froid : +5
+Dégâts de Feu : +5
+Dégâts d'Acide : +5
+10% de chance de drainer 4 niveaux à chaque coup porté
+1/jour: Cri de la Banshee
+
+Inutilisable par :
+ Mage
+ Clerc
+ Druide~
+@7	= ~Cotte de Mailles~
+@8	= ~Armure du Cygne Noir~
+@9	= ~L'armure de cotte de mailles est constituée d'anneaux métalliques imbriqués les uns dans les autres. Elle est toujours portée par-dessus une couche de tissu matelassé ou de cuir souple pour empêcher le frottement et réduire l'impact des chocs.
+
+PARAMETRES :
+
+Classe d'Armure : 5
+Poids : 40
+Force nécessaire : 8
+Non utilisable par :
+ Druide 
+ Mage 
+ Voleur~
+@10	= ~Armure du Cygne Noir
+Forgé dans les profondeurs du nord glacé, l'Armure du Cygne Noir fut durant une éternité un objet d'admiration et d'effroi. Des tribus entières de barbares se sont battues et ont été détruites pour cette armure. Elle offre à son porteur bien des résistances, mais quiconque la possède devra sûrement se battre pour la garder.
+
+PARAMETRES : 
+
+CA : -1
+Résistance au Feu, au Froid, à l'Electricité, à l'Acide et à la Magie : +20%
+Immunité aux sorts de niveau 1
+
+Inutilisable par :
+ Mage
+ Voleur
+ Druide~
+@11	= ~Alliance de Breudayael~
+@12	= ~Alliance de Breudayael
+Cette anneau était le cadeau de mariage de Breudayael D'Sorpal lors de son union avec Anastacia. Le grand mage l'a forgé lui-même, et il contient l'essence de l'une des plus grandes émotions connues de l'homme. Breudayael n'était cependant pas stupide. Il l'avait créé pour une seule personne, et il pourrait se révéler malavisé pour quiconque de le porter.
+
+PARAMETRES :
+
+CA : +4
+Résistance au Froid : +50
+Immunité à l'Immobilisation, à l'Etourdissement et aux Charmes
+Le porteur ne peut être Emprisonné~
+@13	= ~Anneau~
+@14	= ~Fléau de Myrkul~
+@15	= ~Un anneau est une fine lanière de métal précieux. Il sert en général d'ornement. Plus rarement, certains sont enchantés et permettent à quiconque les porte d'user de la magie qu'ils contiennent. Ils sont de ce fait très recherchés par les aventuriers.~
+@16	= ~Fléau de Myrkul
+Cet anneau était destiné à tous les prêtres d'un culte secret de conjurateurs qui désirait renverser le pouvoir tyrannique des prêtres de Myrkul. Il est maintenant craint de tous les adeptes de ce dernier, et est suffisamment puissant pour permettre au porteur d'affronter le dieu lui-même et d'avoir une infime chance de gagner.
+
+PARAMETRES
+
+Immunité au Drain de Niveau
+Immunité à toute forme de Magie de Mort~
+@17	= ~Heaume~
+@18	= ~Heaume de Protection Mentale~
+@19	= ~Cette catégorie de cabasset, fabriquée en cuir ou en métal renforcé, couvre presque l'ensemble de la tête, à l'exception du visage et du cou. Ces casques protègent bien le nez. 
+
+PARAMETRES :
+
+Bonus à la Classe d'Armure : aucun
+Spécial : protège contre les coups critiques
+Poids : 2
+Non utilisable par :
+ Mage
+ Barde
+ Voleur~
+@20	= ~Heaume de Protection Mentale
+L'histoire de ce heaume n'est ni fabuleuse, ni même très intéressante. En fait, les origines mêmes de ce heaume ont été oubliées au cours des années. Il est cependant d'une grande aide pour quiconque s'apprête à affronter des enchanteurs.
+
+PARAMETRES :
+
+CA : +1
+Sagesse : +1
+Immunité aux charmes
+Immunité à la confusion~
+@21	= ~Hache du Scalp Elfe +5~
+@22	= ~Hache du Scalp Elfe +5
+Cette hache fut forgé par les Nains de Profondorn pour être utilisée contre les Elfes de la Main Tranchée. Elle ne fut cependant jamais utilisée, car un groupe d'aventuriers parvint à ramener la paix entre les deux clans. En signe de gratitude, ou de haine, les nains ont offert cette hache au guerrier qui voyageait avec le groupe.
+
+PARAMETRES :
+
+TAC0 : +5
++50% de Résistance à la Magie
+
+Dégâts : 1D8 +5
+Facteur de Vitesse : 5
+10% de chance de décapiter l'adversaire à chaque coup
+
+Inutilisable par :
+ Clerc
+ Mage
+ Voleur
+ Druide~
+@23	= ~Bouclier Runique du Défenseur~
+@24	= ~Bouclier Runique du Défenseur
+Ceci est un bouclier conçu spécialement par des mains naines. Thordek Grandécu le fit construire par un maître forgeron nain afin de l'aider dans sa quête. Les runes gravées sur le bouclier portent les plus grands enchantements nains.
+
+PARAMETRES :
+
+CA : +5
+Résistance à la Magie : +20%
+Résistance au Feu : +30%
+Résistance au Froid : +30%
+Résistance à l'Acide : +45%
+
+Immunité au Drain de Niveau
+
+Force requise : 9
+
+Inutilisable par :
+ Barde
+ Mage
+ Voleur
+ Druide~
+@25	= ~Armure de Plates Complète de Thordek~
+@26	= ~Armure de Plates Complète de Thordek
+Ceci est l'Armure de Plates Complète de Thordek. Un coup d'oeil rapide permet de déceler que cette armure ne fut conçue que pour une personne, puisqu'elle ne se redimensionne pas d'elle-même pour s'adapter à vous. Elle offre une protection insurpassable à celle de toute autre armure qu'on peut trouver à la surface de Féérune.
+
+PARAMETRES :
+
+CA : -4
+Hâte Améliorée permanente
+
+Utilisable par :
+ Nain bon ou neutre~
+@27	= ~Cape de Bronze~
+@28	= ~Ceci semble être une cape composée de morceaux de métal entrelacés.~
+@29	= ~Cape de Bronze
+Cette cape est assez semblable à celles que vous portez d'habitude, mais elle est conçue de morceaux de métal entrelacés, ce qui rend les attaques sournoises sur son porteur quasiment impossibles.
+
+PARAMETRES :
+
+CA : +1
+Immunité aux attaques sournoises
+
+Inutilisable par :
+ Barde
+ Mage
+ Voleur~
+@30	= ~Heaume de Jade Nain~
+@31	= ~Heaume de Jade Nain
+Les Nains ont une passion remarquable pour les joyaux, et nombreux sont leurs alchimistes capables d'extraire l'essence magique présente dans ces pierres pour créer des artefacts fabuleux. Ce heaume est l'un d'eux. Constitué de métal et incrusté de jade, ce heaume accorde à son porteur une certaine résistance aux attaques mentales.
+
+PARAMETRES :
+
+Immunité aux coups critiques
+Résistance au Feu : +50%
+Résistance à l'Electricité : +50%
+Immunité aux Charmes
+
+Utilisable par :
+ Nains~
+@32	= ~Bâton de Zoltan~
+@33	= ~Bâton de Zoltan
+Zoltan était un chevalier, et non un mage. Il fit construire ce bâton pour Alexia, une elfe de son groupe dont il désirait gagner le coeur. Il n'y parvint jamais, mais elle était dirigée par une insatiable soif de pouvoir, raison pour laquelle elle garda cet objet.
+
+PARAMETRES :
+
+Temps d'Incantation : -1
+Résistance au Froid : +50%
+Protection contre le mal
+
+TAC0 : +5
+Dégâts : 1D8 +1
+
+Utilisable par :
+ Mage~
+@34	= ~Protection contre le Mal~
+@35	= ~Robe de la Lune et des Étoiles~
+@36	= ~Robe de la Lune et des Étoiles
+C'est une robe magnifique. Elle est noire, décorée de croissants de lune et d'étoiles brillantes. Elle n'a cependant pas été conçue uniquement pour être montrée, mais également pour enseigner à son porteur certaines arcanes de la magie. Comme toutes les robes de ce type, elle ne peut être portée que par les mages.
+
+PARAMETRES :
+
+Charisme : +1
+Le porteur peut lancer : 
+	4 sorts de niveau 1 supplémentaires par jour
+	2 sorts de niveau 2 supplémentaires par jour
+	1 sort de niveau 3 supplémentaire par jour
+	
+Utilisable par :
+ Mage~
+@37	= ~Anneau de Vérité~
+@38	= ~Karlat était un mage très intelligent, mais manquant parfois de sagesse. Alors qu'il sombrait de plus en plus dans la folie qui l'avait accompagné sa vie durant, il créa cet anneau pour tenter de découvrir le 'sens de la vie'. Cet anneau ne fut jamais terminé, mais même inachevé, il permet à son porteur de découvrir bien des secrets.
+
+PARAMETRES :
+
+Sagesse : +3
+1 sort supplémentaire de niveau 6 à 9~
+@39	= ~Pierre Ionique de Platine~
+@40	= ~Les puissants enchantements présents sur cette pierre ionique en font un trésor particulièrement recherché des mages et des sorciers.
+
+PARAMETRES :
+
+Immunité au Drain de Niveau
+Charisme : +2
+1 sort supplémentaire de niveau 1 à 9 par jour
+
+Utilisable par :
+ Barde
+ Mage~
+@41	= ~Bâton du Vrai Mage~
+@42	= ~Bâton du Vrai Mage
+Ce bâton fut créé par le grand archimage Rastor afin d'améliorer encore ses pouvoirs magiques durant les combats. Bien que sa réalisation ait été un succès, Rastor a rapidement créé un meilleur bâton, et a donc donné celui-ci a un de ses bons amis. On ignore absolument ce qui lui est arrivé depuis.
+
+PARAMETRES :
+
+Le porteur est sous l'effet de :
+ Protection contre le Mal
+ Bénédiction
+ Immunité à la Peur
+ Invisibilité
+ 
+1 fois par jour : Piège à sort
+
+TAC0 : +5
+Dégâts : 1D8 +1
+
+Utilisable par :
+ Mage~
+@43	= ~Robe de Mystra~
+@44	= ~Robe de Mystra
+Cette robe fut offerte à Breudayael par Mystra, déesse de la Magie. Il fut en effet pendant longtemps l'un de ses plus fervents disciples.
+
+Certains sages prétendent que le mage était en fait un des enfants de Mystra, car il a montré dès sa naissance une grande affinité avec la magie. Cette robe est un don pour lequel bien des praticiens des arts occultes sacrifieraient tout.
+
+PARAMETRES :
+
+Immunité à Arrêt du Temps
+Immunité aux sorts de niveau 6 et inférieurs
+Immunité à la Magie de Mort et aux Effets de Mort instantanée de certains objets
+Immunité à la Peur
+Immunité aux Charmes
+Immunité à la Confusion
+Immunité à l'Emprisonnement
+Résistance à la Magie : +75%
+Résistance à l'Acide : +40%
+Résistance au Feu : +40%
+Résistance au Froid : +40%
+Résistance à l'Electricité : +40%
+Immunisé aux armes +3 et inférieures
++4 sorts supplémentaires de niveau 9 par jour
+
+Classe d'Armure : 4
+
+Utilisable par :
+ Mage d'alignement neutre~
+@45	= ~Robe de Mage~
+@46	= ~Depuis l'ère de Néthéril, les mages ont appris à conférer aux objets quotidiens qui les entouraient une grande variété de propriétés magiques. L'un des plus usités de ces objets est la robe courante. Elle est légère, peu onéreuse et conserve bien ses enchantements. Cela en fait une parure de mage idéale. Cependant, en raison de leur héritage magique, ces robes enchantées ne peuvent être portées que par des mages monoclassés, à classes jumelées ou multiclassés.~
+@47	= ~Bandeau de D'Sorpal~
+@48	= ~Bandeau de D'Sorpal
+Ceci est le bandeau enchanté de la Maison D'Sorpal. Bien qu'il soit rare qu'un mâle d'une cité drow reçoive un tel héritage, Breudayael eut la chance d'être doté d'un tel pouvoir que quiconque s'est risqué à tenter de le lui voler connut le même sort que la Mère Matrone de sa maison. Bien peu apprécient d'être transformé en mouche dans une ville remplie d'araignées.
+
+PARAMETRES :
+
+3 sorts supplémentaires de niveau 1 à 7
+
+Utilisable par :
+ Drow~
+@49	= ~Anneau de Bouclier du Mage de Rastor~
+@50	= ~Anneau de Bouclier du Mage de Rastor
+Cet anneau fut forgé à la demande de l'Archimage Rastor afin de le protéger des sorts de ses adversaires lorsqu'il traversait les plans. Il le donna plus tard à un apprenti, et on ignore ensuite ce qu'il en est advenu.
+
+PARAMETRES :
+
+Immunité aux sorts de Transmutation
+Immunité à tous les sorts offensifs dirigés contre le porteur
+
+Utilisable par :
+ Mage~
+@51	= ~Anneau de Connaissance~
+@52	= ~Anneau de Connaissance
+Un mage inconnu créa cet anneau. Il fut plus tard tué par Bill le Derviche qui voulait l'offrir à sa femme.
+
+PARAMETRES :
+
+3 sorts supplémentaires de niveau 3 à 6
+Sagesse : +1
+
+Utilisable par :
+ Mage~
+@53	= ~Anastacia~
+@54	= ~Thordek~
+@55	= ~Drusilia~
+@56	= ~Breudayael~
+@57	= ~Kargak le Destructeur~
+@58	= ~Lord Karadin le Maudit~
+@59	= ~Ombre des Roches Noble~
+@60	= ~Arianna~
+@61	= ~Sanar~
+@62	= ~Rage du Berserker~
+@63	= ~Chaîne de Contingence~
+@64	= ~Déclencheur de Sorts~
+@65	= ~Déclencheur de Sorts - Vision Véritable~
+@66	= ~Déclencheur de Sorts - Protection contre les Armes Magiques~
+@67	= ~Déclencheur de Sorts - Protection contre l'Energie Magique~
+@68	= ~Chaîne de Contingence - Immunité aux Sorts : Abjuration~
+@69	= ~Chaîne de Contingence - Immunité aux Sorts : Divination~
+@70	= ~Chaîne de Contingence - Détection Faussée~
+@71	= ~Séquenceur de Sorts~
+@72	= ~Séquenceur de Sorts - Bouclier de Feu : Rouge~
+@73	= ~Séquenceur de Sorts - Bouclier de Feu : Bleu~
+@74	= ~Séquenceur de Sorts - Convocation de Monstre 1~
+@75	= ~Séquenceur de Sorts Mineurs~
+@76	= ~Séquenceur de Sorts Mineurs - Projectile Magique~
+@77	= ~Chaîne de Contingence - Horrible Flétrissure d'Abi Dhalzim~
+@78	= ~Chaîne de Contingence - Peau de Pierre~
+@79	= ~Chaîne de Contingence - Manteau Amélioré~
+@80	= ~Chaîne de Contingence - Flou~
+@81	= ~Chaîne de Contingence - Immunité Absolue~
+@82	= ~Déclencheur de Sorts - Porte d'Ombre~
+@83	= ~Déclencheur de Sorts - Piège à Sorts~
+@84	= ~Préparez-vous à connaître votre fin !~
+@85	= ~Déclencheur de Sorts - Détection Faussée~
+@86	= ~Déclencheur de Sorts - Champ de Téléportation~
+@87	= ~Liche de Spellhold~
+@88	= ~Scripts ameliores pour les joueurs~
+@89	= ~Script de clerc amélioré de Rastor~
+@90	= ~Ceci est un script universel pour les clercs. Le clerc s'assurera que tous les membres de votre groupe sont dans un état de santé raisonnable avant de lancer des sorts offensifs. Il ne gaspillera pas ses sorts sur des ennemis qui y sont insensibles. Il n'en lancera pas non plus sur des ennemis faibles.~
+@91	= ~Script de mage amélioré de Rastor~
+@92	= ~Ce script implémente un comportement intelligent pour les mages. Il est basé sur les scripts des magiciens adversaires mais a été modifié pour convenir aux joueurs. Ainsi, le mage lancera des sorts de haut niveau sur les ennemis qui en valent la peine. Il ne gaspillera ses meilleurs sorts sur des ennemis faibles, ni ses sorts de zone lorsque seul un ou deux adversaires sont en vue.~
+@93	= ~Mage fou~
+@94	= ~Vlis'tiara~
+@95	= ~Tortionnaire Drow~
+@96     = ~Troll~
+@97     = ~Sortileges detectables (requis pour les autres composants)~
+@98     = ~Besoins pour le mod~
+@99     = ~Improved Asylum est deja installe !~
+@100    = ~Copie un fichier-leurre afin que les autres mods puissent voir que celui-ci est installe.~
+@101    = ~Liche de Spellhold est deja installe.~
+@102    = ~Copie un fichier-leurre afin que les autres mods puissent voir que celui-ci est installe.~
+@103    = ~Scripts ameliores pour les joueurs est deja installe.~
+@104    = ~Copie un fichier-leurre afin que les autres mods puissent voir que celui-ci est installe.~
+
+
+// WeiDU prompts
+@-1000= "Le mod %TP2_FILE_NAME% contient"
+@-1001= "composants optionnels distincts.
+Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
+au niveau general plutot que de repondre aux questions pour chacun.
+"
+@-1002= "Que faut-il faire de tous les composants qui NE sont PAS ENCORE installes ?
+Les [I]nstaller, les [S]auter, dem[A]nder pour chacun ? "
+@-1003= "Que faut-il faire de tous les composants qui sont DEJA installes ?
+Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
+
+@-1004= "S'IL VOUS PLAIT, envoyez par e-mail le fichier"
+@-1005= "a"
+
+@-1006= "Installer le composant ["
+@-1007= "] ?
+[R]einstaller, co[N]server, s[U]pprimer ou [Q]uitter ? "
+@-1008= "] ?
+[I]nstaller, [N]e pas installer ou [Q]uitter ? "
+
+@-1009= "Entrez une partie du nom du module : "
+
+@-1010= "Reinstallation du composant ["
+@-1011= "] "
+@-1012= "Reinstallation dans la langue"
+
+@-1013= "Suppression de l'ancienne installation de ["
+@-1014= "] au prealable..."
+@-1015= "SUPPRESSION REUSSIE DE L'ANCIEN"
+
+@-1016= "Installation en cours"
+@-1017= "ERREUR pendant l'installation de ["
+@-1018= "], retour a l'etat anterieur"
+@-1019= "INSTALLATION REUSSIE"
+@-1020= "Saute"
+@-1021= "Suppression de ["
+@-1022= "] (composant #"
+@-1023= ")"
+@-1024= "SUPPRESSION REUSSIE DE ["
+
+@-1025= "] ?
+[R]einstaller, co[N]server, s[U]pprimer, [Q]uitter ou choisir un parmi :"
+@-1026= "] ?
+[N]e pas installer, [Q]uitter ou choisir un parmi :"
+@-1027= " (installe actuellement)"
+
+@-1028= "Souhaitez-vous afficher les composants de ["
+@-1029= "] ?
+[Y]Oui, [N]on ? "
+
+@-1030= "] ?
+choisir un parmi :"
+@-1031= "] ?
+[R]einstaller, co[N]server, [Q]uitter ou choisir un parmi :"
+@-1032= "INSTALLATION ECHOUEE A CAUSE D'ERREURS"
+@-1033= "INSTALLATION AVEC DES ALERTES"
+@-1034= "Souhaitez-vous afficher les instructions (ReadMe) ? [Y]Oui [N]on"
+@-1035= "Dans la langue"
+
+@-1036= "Saute le GROUPE ["
+@-1037= "] pour cause d'absence des pre-requis."
+
+@-1038= "dem[A]nder pour chaque composant, tout [S]auter, ou choisir une selection pre-definie :"
+@-1039= "dem[A]nder pour chaque composant, [R]einstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une selection pre-definie :" 

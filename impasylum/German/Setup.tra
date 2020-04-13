@@ -1,0 +1,393 @@
+@0    = ~Improved Asylum Mod für BG2:ToB~
+@1    = ~Langschwert~
+@2    = ~Bardenfluch+5~
+@3    = ~Bardenfluch +5
+Diese Waffen wurde von den Zhentarim gefertigt, um sie in einem Konflikt mit den Harfnern zu verwenden. Die Waffe wurde jedoch nie eingesetzt, weil der vorhergesagte Krieg, für den Bardenfluch geschmiedet worden war, niemals stattfand. Es ist unklar, wie diese Waffe die Festung der Zhentarim verlassen hat, aber es wird gemutmaßt, dass ein Dieb die Waffe stahl, nachdem er eine sehr billige Inszenierung von “Ein Sommernachtstraum” gesehen hatte. Diese Theorie hat durchaus ihre Grundlage, denn einer der charismatischsten Schauspieler wurde tot aufgefunden, wobei alle Spuren seine vormals anmutigen Gesichts verschwunden waren. Der Schauspieler erhielt das üblich Begräbnis eines Bettlers.
+
+EIGENSCHAFTEN:
+
+Der Träger ist immun gegen Flammenpfeile und ist vor Barden geschützt. Bei jedem Treffer entzieht die Waffe dem Opfer 3 Punkte Charisma.
+
+Schaden: 1W8+5 (Klinge)
+ETW0-Bonus: +5
+Magieresistenz: +10%
+Initiativefaktor: 0
+Fertigkeit: Langschwert
+Typ: 1-händig
+
+Kann nicht verwendet werden von:
+ Magiern
+ Klerikern
+ Barden
+ Druiden~
+@4    = ~Diese Schwerter werden auch als zweischneidige Schwerter, Kriegsschwerter oder Militärschwerter bezeichnet. Es gibt keine einheitliche Form des Langschwertes. Seine Form und Länge sind von Kultur zu Kultur unterschiedlich und können selbst innerhalb einer Kultur je nach Zeitalter variieren. Das grundlegendste Merkmal aller Langschwerter ist ihre Länge, die zwischen 90 cm und 1,20 m beträgt. Im letzteren Fall nimmt die Klinge 1 m der Gesamtlänge ein. Die meisten Langschwerter besitzen eine zweischneidige Klinge mit einer scharfen Spitze. Trotz dieser Spitze ist das Langschwert nicht zum Stoßen, sondern zum Schwingen vorgesehen. 
+
+EIGENSCHAFTEN:
+
+Schaden: 1W8 (Klinge)
+Gewicht: 4
+Initiativefakor: 5
+Mindeststärke: 6
+Fertigkeit: Langschwert
+Typ: 1-händig
+
+Kann nicht verwendet werden von:
+ Druiden
+ Klerikern
+ Magiern~
+@5    = ~Herz von Braldain +5~
+@6    = ~Herz von Braldain +5
+Braldain war ein berüchtigter Dunkelelfen-Nekromant, der eine sehr schmerzvolle Geschichte hatte. Er erlangt zu großer Macht, während er durch die Kontinente streifte, aber nur wenige kannten den Schmerz, den er im Herzen trug.
+
+Braldain wurde lange von der Erinnerung an mehrere Elfenfrauen gequält und dies erwies sich als sein endgültiger Untergang. Schließlich begann er, die wenigen jungen Schönheiten, die er um seine Heimatstadt herum fand, zu foltern, um ihre Lebensenergie für den größten aller nekromantischen Sprüche zu erhalten.
+
+Was genau zu seinem Untergang führte, bleibt reine Spekulation, aber es gibt das Gerücht, dass er mit der Suche nach Macht beschäftigt war, als er verschwand. Dieses Schwert ist alles, was als sein Vermächtnis entdeckt wurde, und was für ein Vermächtnis das ist! Dieses Schwert enthält die Essenz des dunklen Herzens des Nekromanten, das immer noch durch die Erinnerungen an die schreckliche Folter all dieser jungen Frauen vernarbt ist.
+
+EIGENSCHAFTEN:
+
+Schrei der Todesfee (1x täglich)
+
+Der Träger ist immun gegen Zeitstopp und Gift. Bei jedem Treffer besteht eine Chance von 10%, dem Opfer 4 Stufen durch Entzug von Lebensenergie zu stehlen.
+
+Schaden: 1W8+5
+Schadensboni:
+ +5 durch Elektrizität
+ +5 durch Kälte
+ +5 durch Feuer
+ +5 durch Säure
+ETW0-Bonus: +5
+Initiativefakor: 0
+Fertigkeit: Langschwert
+Typ: 1-händig
+
+Kann nicht verwendet werden von:
+ Magiern
+ Klerikern
+ Druiden~
+@7    = ~Kettenhemd~
+@8    = ~Schwarze Schwanenrüstung~
+@9    = ~Ein Kettenhemd besteht aus miteinander verbundenen Metallringen. Es wird immer über einem wattierten Rock oder einem leichten Ledergewand getragen, um schmerzhafte Scheuerstellen zu vermeiden und die Wucht von Schlägen zu dämpfen.
+
+EIGENSCHAFTEN:
+
+Rüstungsklasse: 5
+Gewicht: 40
+Mindeststärke: 8
+
+Kann nicht verwendet werden von:
+ Druiden 
+ Magiern
+ Dieben~
+@10   = ~Schwarze Schwanenrüstung
+Geschmiedet in den Tiefen des eisigen Nordens, war die Schwarze Schwanenrüstung lange Zeit ein Objekt der Bewunderung und Furcht. Ganze Barbarenstämme haben wegen dieses Artefakts gekämpft und wurden zerstört. Diese Rüstung verleiht ihrem Träger großen Widerstande, aber wer auch immer sie besitzt, wird wahrscheinlich darum kämpfen müssen, sie zu behalten.
+
+EIGENSCHAFTEN:
+
+Der Träger ist immun gegen Zauber der Stufe 1.
+
+Rüstungsklasse: -1
+Feuerresistenz: +20%
+Kälteresistenz: +20%
+Elektrizitätsresistenz: +20%
+Säureresistenz: +20%
+Magieresistenz: +20%
+
+Kann nicht verwendet werden von:
+ Magiern
+ Dieben
+ Druiden~
+@11   = ~Breudayaels Ehering~
+@12   = ~Breudayaels Ehering
+Dieser Ring war ein Hochzeitsgeschenk von Breudayael D'Sorpal zu seiner Heirat mit Anastasia. Der große Magier hatte ihn selbst hergestellt und er enthält die Essenz einer der stärksten Emotionen, die der Menschheit bekannt ist. Breudayael ist jedoch kein Narr. Er hat erschuf den Ring speziell für diese eine Elfe und ihn zu tragen könnte sich für jeden anderen als unklug herausstellen.
+
+EIGENSCHAFTEN:
+
+Der Träger ist immun gegen Festhalten, Betäubung, Bezauberung und Einkerkerung.
+
+RK-Bonus: +4
+Kälteresistenz: +50%~
+@13   = ~Ring~
+@14   = ~Verderben des Myrkul~
+@15   = ~Ein Ring ist ein kleines Band aus wertvollem Metall, das als Schmuck am Finger getragen wird. Einige Ringe sind verzaubert und verleihen magische Fähigkeiten. Diese Ringe sind heiß begehrt, insbesondere von Abenteurern und Magiern.~
+@16   = ~Verderben des Myrkul
+Dieser Ring wurde an alle Mitglieder eines Geheimkultes von Beschwörern ausgegeben, die eine tyrannische Gruppe von Priestern des Myrkul zu Fall bringen wollten. Dieser Ring ist nun bei all seinen Anhängern gefürchtet und er kann in der Tat mächtig genug sein, um seinem Träger zu erlauben, selbst den Gott herauszufordern und dennoch eine Chance auf Sieg zu haben.
+
+EIGENSCHAFTEN:
+
+Der Träger ist immun gegen Stufenabzug und jede Art von Todesmagie.~
+@17   = ~Helm~
+@18   = ~Helm des Geistigen Schutzes~
+@19   = ~Diese Art eines offenen Helms besteht aus verstärktem Leder oder Metall und bedeckt den Großteil des Kopfes mit Ausnahme des Gesichts und des Nackens. Die meisten dieser Helme sind mit einem Nasenschutz versehen. 
+
+EIGENSCHAFTEN::
+
+Schützt vor kritischen Treffern
+Gewicht: 2
+
+Kann nicht verwendet werden von:
+ Magiern
+ Barden
+ Dieben~
+@20   = ~Helm des Geistigen Schutzes
+Die Geschichte, die hinter diesem Helm steht, ist weder großartig noch interessant. Vielmehr sind die eigentlichen Ursprünge dieses Helms im Laufe der Zeit verloren gegangen. Er ist dennoch sehr praktisch, wenn sein Besitzer gegen Verzauberer kämpfen will.
+
+EIGENSCHAFTEN:
+
+Der Träger ist immun gegen Bezauberung und Verwirrung.
+
+RK-Bonus: +1
+Weisheits-Bonus: +1
+Schützt vor kritischen Treffern~
+@21   = ~Axt des Elfenskalps +5~
+@22   = ~Axt des Elfenskalps +5
+Diese Axt wurde vom Zwergenvolk in Dorns Klamm geschmiedet, um sie gegen die Elfen, die in der Abgetrennten Hand lebten, einzusetzen. Die Waffe wurde jedoch nie eingesetzt, weil eine Abenteurergruppe einschritt und die beiden Klans versöhnte. Entweder aus Dankbarkeit oder aus Hass schenkten die Zwerge dem Kämpfer, der mit der Gruppe reiste, diese Axt.
+
+EIGENSCHAFTEN:
+
+Der Träger ist immun gegen Zauber der Stufe 2 und geringer und ist vor Elfen geschützt. Bei jedem Treffer besteht eine Chance von 10% das Ziel zu enthaupten.
+
+Schaden: 1W8+5 (Klinge)
+ETW0-Bonus: +5
+Magieresistenz: +50%
+Initiativefaktor: 5
+Fertigkeit: Axt
+Typ: 1-händig
+
+Kann nicht verwendet werden von:
+ Klerikern
+ Magiern
+ Dieben
+ Druiden~
+@23   = ~Runenverteidiger~
+@24   = ~Runenverteidiger
+Dies ist ein von Zwergenhand maßgeschmiedeter Schild. Thordek Breitschild lies ihn von einem zwergischen Meisterschmied anfertigen, um ihn bei einer Aufgabe zu unterstützen. Die Runen, die auf den Schild gezeichnet sind, tragen die stärksten aller zwergischen Verzauberungen.
+
+EIGENSCHAFTEN:
+
+Der Träger ist vor Stufenabzug geschützt.
+
+RK-Bonus: +5
+Magieresistent: +20%
+Feuerresistenz: +30%
+Kälteresistenz: +30%
+Säureresistenz: +45%
+Mindeststärke: 9
+
+Kann nicht verwendet werden von:
+ Barden
+ Magiern
+ Dieben
+ Druiden~
+@25   = ~Thordeks Prunkharnisch~
+@26   = ~Thordeks Prunkharnisch
+Dies ist Thordeks Prunkharnisch. Ein kurzer Blick offenbart, dass die Rüstung augenscheinlich nur für einen Träger gedacht war, denn sie passt sich nicht Eurer Größe an. Sie bietet Schutz, wie es sonst keine Rüstung, die man auf der Oberfläche Faerûns finden kann, vermag.
+
+EIGENSCHAFTEN:
+
+Auf dem Träger liegen permanent die Auswirkungen von Verbesserter Hast.
+
+Rüstungsklasse: -4
+
+Kann nur verwendet werden von:
+ Guten oder neutralen Zwergen, die auch sonst Prunkharnische verwenden können~
+@27   = ~Bronzeumhang~
+@28   = ~Dies scheint ein Umhang zu sein, der aus ineinander greifenden Stücken eines schweren Metalls gefertigt ist.~
+@29   = ~Bronzeumhang
+Dies ist mehr oder weniger ein ganz normaler Umhang von der Stange, bis auf die Tatsache, dass es er aus drehbar ineinander greifenden Bronzestückchen gefertigt worden ist. Das sollte einen hinterhältigen Angriff auf den Träger nahezu unmöglich machen.
+
+EIGENSCHAFTEN:
+
+Der Träger ist immun gegen Hinterhältige Angriffe.
+
+Rüstungsklasse-Bonus: +1
+
+Kann nicht verwendet werden von:
+ Barden
+ Magier
+ Dieben~
+@30   = ~Jade Zwergenhelm~
+@31   = ~Jade Zwergenhelm
+Zwerge haben eine bemerkenswerte Leidenschaft für Edelsteine und viele ihrer Alchemisten haben Wege gefunden, um die magische Essenz, die in diesen Steinen vorhanden ist, herauszuziehen und daraus erstaunliche Gegenstände zu fertigen. Dieser Helm ist einer dieser Gegenstände. Er wurde aus massiven Metall hergestellt, mit Jade-Verziehrungen versehen und verleiht seinem Träger einigen Widerstand gegen geistige Angriffe.
+
+EIGENSCHAFTEN:
+
+Der Träger ist immun gegen Bezauberung.
+
+Feuerresistenz: +50%
+Elektrizitätsresistenz: +50%
+Schützt vor kritischen Treffern
+
+Kann nur verwendet werden von:
+ Zwergen~
+@32   = ~Stab des Zoltan~
+@33   = ~Stab des Zoltan
+Zoltan war ein Ritter, kein Magier. Er bestellte diesen Stab für Alexia, einer Elfe in seiner Abenteurergruppe, deren Herz er so sehnlichst gewinnen wollte. Er hatte mit diesem Stab keinen Erfolg bei der Eroberung ihres Herzens, aber da sie von einem unersättlichen Machthunger getrieben wurde, behielt sie ihn trotzdem.
+
+EIGENSCHAFTEN:
+
+Der Träger erhält auf die Initiative beim Zaubern einen Bonus von -1 und ist vor Bösem geschützt.
+
+Schaden: 1W8+1 (Wucht)
+ETW0-Bonus: +5
+Kälteresistenz: +50%
+Fertigkeit: Kampfstab
+Typ: 2-händig
+
+Kann nur verwendet werden von:
+ Magiern (auch mehrklassig und mit Klassenkombination)~
+@34   = ~Schutz vor Bösem~
+@35   = ~Robe vom Mond und den Sternen~
+@36   = ~Robe vom Mond und den Sternen
+Dies ist wahrlich eine feine Robe. Sie ist schwarz und mit Bildern eines Sichelmondes und heller gelber Sterne verziert. Die Robe ist jedoch nicht nur zur bloßen Vorführung gedacht, denn sie schafft es ihrem Träger einige Geheimnisse der Magie zu lehren. Wie alle Roben ihrer Art kann sie nur von Magiern getragen werden.
+
+EIGENSCHAFTEN:
+
+Charisma-Bonus: +1
+Zusätzliche Zauber:
+ +4 (Grad 1)
+ +2 (Grad 2)
+ +1 (Grad 3)
+
+Kann nur verwendet werden von:
+ Magiern (auch mehrklassig und mit Klassenkombination)~
+@37   = ~Ring der Wahrheit~
+@38   = ~Ring der Wahrheit
+Karlat war hochintelligent, aber es fehlte ihm ein bisschen an Weisheit. Als die Verrücktheit, die sein ganzes Leben lang sein ständiger Begleiter war, immer größer wurde, begann er, in einem Versuch den “Sinn des Lebens” zu entdecken, diesen Ring zu erschaffen. Der Ring ist unvollständig, was seine eigentliche Aufgabe angeht, aber selbst in seinem unvollständigen Zustand hilft er dem Träger lange verborgene Geheimnisse zu entdecken.
+
+EIGENSCHAFTEN:
+
+Weisheits-Bonus: +3
+Zusätzliche Zauber:
+ +1 (Grad 6-9)~
+@39   = ~Platin-Ionenstein~
+@40   = ~Platin-Ionenstein
+Die mächtigen Verzauberungen auf diesem Ionenstein machen ihn zu einem Schatz, der von Magiern eifrig gesucht wird.
+
+EIGENSCHAFTEN:
+
+Der Träger ist vor Stufenabzug geschützt.
+
+Charisma-Bonus: +2
+Zusätzlich Zauber:
+ +1 (Grad 1-9)
+
+Kann nur verwendet werden von:
+ Magiern
+ Barden~
+@41   = ~Stab das Wahren Weisen~
+@42   = ~Stab des Wahren Weisen
+Dieser Stab wurde vom großen Erzmagier Rastor erschaffen, um die Macht seiner Magie im Kampf zu unterstützen. Obwohl die Fertigung ein Erfolg war, erschuf Rastor bald einen besseren Stab, und so gab er diesen an einen seiner guten Freunde weiter. Wie er von dort hierher kam, scheint unbekannt zu sein.
+
+EIGENSCHAFTEN:
+
+Zauberfalle (1x täglich)
+
+Der Träger ist immun gegen Furcht und ist vor Bösem geschützt. Darüber hinaus ist er unsichtbar und auf ihm liegen permanent die Auswirkungen von Segen.
+
+Schaden: 1W8+1 (Wucht)
+ETW0-Bonus: +5
+Fertigkeit: Kampfstab
+Typ: 2-händig
+
+Kann nur verwendet werden von:
+ Magiern~
+@43   = ~Robe der Mystra~
+@44   = ~Robe der Mystra
+Diese Robe wurde Breudayael von Mystra, der Göttin der Magie, überreicht. Er war lange Zeit einer ihrer eifrigsten Schüler gewesen.
+
+Gelehrte mutmaßen, dass der Magier eigentlich ein Kind Mystras ist, da er seit seiner Geburt einen großen Hang zur Magie hatte. Diese Robe ist wahrlich ein Geschenk, für das zu erhalten jeder Anwender der Künste viel opfern würde.
+
+EIGENSCHAFTEN:
+
+Der Träger ist immun gegen Zeitstopp, Zauber der Stufe 6 und darunter, jede Art von Todesmagie, Furcht, Bezauberung, Verwirrung und Einkerkerung. Darüber hinaus kann der Träger nur von magischen Waffen +4 oder besser verwundet werden.
+
+Rüstungsklasse: 4
+Magieresistenz: +75%
+Säureresistenz: +40%
+Feuerresistenz: +40%
+Kälteresistenz: +40%
+Elektrizitätsresistenz: +40%
+Zusätzliche Magierzauber:
+ +4 (Grad 9)
+
+Kann nur verwendet werden von:
+ Neutralen Magiern~
+@45   = ~Magierrobe~
+@46   = ~Seit der Zeit der Netheril haben Magier gelernt, die sie umgebenden alltäglichen Gegenstände mit einer großen Vielfalt von magischen Eigenschaften zu versehen. Ein beliebtes Ziel für solche Verzauberungen ist die gewöhnliche Robe. Sie ist leicht, bezahlbar und behält ihre Verzauberung gut bei, wodurch sie zur idealen Ausrüstung eines Magiers wird. Aufgrund ihres magischen Erbes können jedoch nur einzel- und mehrklassige sowie klassenkombinierte Magier diese verzauberten Roben tragen.~
+@47   = ~Reif der D'Sorpal~
+@48   = ~Reif der D'Sorpal
+Dies ist der verzauberte Reif des Hauses D'Sorpal. Obwohl es für Männer in der Drow-Gesellschaft selten ist, solch ein Erbstück zu erhalten, war Breudayael mit solch einer Macht gesegnet, dass jeden, der den Versuch gewagt hätte, diesen Reif von ihm zu nehmen, das selbe Schicksal wie die Mutter Oberin des Hauses ereilt hätte. Nur wenige Drow können die Erfahrung genießen, eine Fliege in einer Stadt voller Spinnen zu sein.
+
+EIGENSCHAFTEN:
+
+Zusätzliche Magierzauber:
+ +3 (Grad 1-7)
+
+Kann nur verwendet werden von:
+ Drow~
+@49   = ~Rastors Ring der magischen Abschirmung~
+@50   = ~Rastors Ring der magischen Abschirmung
+Dieser Ring wurde vom Erzmagier Rastor in Auftrag gegeben, um ihn vor den Zaubern seiner Feinde zu schützen, während er die Ebenen durchquerte. Später gab Rastor ihn einem seiner Schüler und von da an ist seine Geschichte unbekannt.
+
+EIGENSCHAFTEN:
+
+Der Träger ist immun gegen Verwandlungsmagie und jeden auf ihn gezielten offensiven Zauber.
+
+Kann nur verwendet werden von:
+ Magiern (auch mehrklassig und mit Klassenkombination)~
+@51   = ~Ring des Wissens~
+@52   = ~Ring des Wissens
+Irgendein unbekannter Magier hat diesen Ring erschaffen. Später wurde dieser aber von Bill dem Derwisch getötet, der den Ring als Geschenk für seine Frau haben wollte.
+
+EIGENSCHAFTEN:
+
+Weisheits-Bonus: +1
+Zusätzliche Magierzauber:
+ +3 (Grad 3-6)
+
+Kann nur verwendet werden von:
+ Magiern (auch mehrklassig und mit Klassenkombination)~
+@53   = ~Anastasia~
+@54   = ~Thordek~
+@55   = ~Drusilia~
+@56   = ~Breudayael~
+@57   = ~Kargak der Zerstörer~
+@58   = ~Fürst Karadin der Verfluchte~
+@59   = ~Adliger Erdkoloss~
+@60   = ~Arianna~
+@61   = ~Sanar~
+@62   = ~Berserker Kampfrausch~
+@63   = ~Kombinierter Notfall~
+@64   = ~Zauberauslöser~
+@65   = ~Zauberauslöser - Wahrer Blick~
+@66   = ~Zauberauslöser - Schutz vor magischen Waffen~
+@67   = ~Zauberauslöser - Schutz vor magischer Energie~
+@68   = ~Kombinierter Notfall - Immunität gegen Zauber: Bannzauber~
+@69   = ~Kombinierter Notfall - Immunität gegen Zauber: Erkenntniszauber~
+@70   = ~Kombinierter Notfall - Ablenkung~
+@71   = ~Kettenzauber~
+@72   = ~Kettenzauber - Feuerschild: Rot~
+@73   = ~Kettenzauber - Feuerschild: Blau~
+@74   = ~Kettenzauber - Monster herbeirufen I~
+@75   = ~Geringerer Kettenzauber~
+@76   = ~Geringerer Kettenzauber - Magisches Geschoss~
+@77   = ~Kombinierter Notfall - Abi Dhalzims abscheuliche Austrocknung~
+@78   = ~Kombinierter Notfall - Steinhaut~
+@79   = ~Kombinierter Notfall - Verbesserter Schutzmantel~
+@80   = ~Kombinierter Notfall - Verschwimmen~
+@81   = ~Kombinierter Notfall - Absolute Immunität~
+@82   = ~Zauberauslöser - Phantomtor~
+@83   = ~Zauberauslöser - Zauberschild~
+@84   = ~Bereitet Euch auf Euer Ende vor!~
+@85   = ~Zauberauslöser - Ablenkung~
+@86   = ~Zauberauslöser - Teleportationsfeld~
+@87   = ~Leichnam der Zauberfeste~
+@88   = ~Verbesserte Spieler-Skripte~
+@89   = ~Rastors verbessertes Kleriker-Skript~
+@90   = ~Dies ist ein allgemeines Skript für Kleriker. Der Kleriker wird sicherstellen, dass Eure Gruppe in vernünftiger gesundheitlicher Verfassung ist, bevor er irgendwelche offensiven Sprüche spricht, und er wird keine Zauber an Feinde verschwenden, die von diesen unberührt bleiben. Darüber hinaus wird der Kleriker auch keine Zauber auf schwache Gegner aussprechen.~
+@91   = ~Rastors verbessertes Magier-Skript~
+@92   = ~Dieses Skript verwirklicht eine intelligente Zaubernutzung für Magier. Es basiert hauptsächlich auf einem intelligenten Skript für feindliche Magier, aber wurde dahingehend modifiziert, dass es bei Spielern funktioniert. Dieses Skript sorgt hauptsächlich dafür, dass Euer Magier hochstufige Sprüche nur auf Gegner zaubert, die es auch wert sind. Der Magier wird weder seine besten Sprüche an schwachen Gegnern verschwenden noch Flächenzauber verschwenden, wenn nur ein oder zwei Gegner in Sichtweite sind.~
+@93  = ~Verrückter Magier~
+@94  = ~Vlis'tiara~
+@95  = ~Drow Folterknecht~
+@96  = ~Troll~

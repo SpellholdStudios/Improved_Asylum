@@ -1,0 +1,38 @@
+IF
+Global("r#drowchase","AR1514",0)
+Gender(Player1,MALE)
+THEN
+RESPONSE #100
+SetGlobal("r#drowchase","AR1514",1)
+CreateCreature("r#efem",[1315.519],3)
+END
+
+IF
+Global("r#drowchase","AR1514",0)
+Gender(Player1,FEMALE)
+THEN
+RESPONSE #100
+SetGlobal("r#drowchase","AR1514",1)
+CreateCreature("r#emale",[1315.519],2)
+END
+
+IF
+Global("r#minoreplace","AR1514",0)
+THEN
+RESPONSE #100
+SetGlobal("r#minoreplace","AR1514",1)
+CreateCreature("umbhul02",[2347.841],0)
+CreateCreature("umbhul02",[2508.782],0)
+CreateCreature("umbhul02",[2244.767],0)
+CreateCreature("umbhul02",[1662.1293],0)
+END
+
+IF
+Global("r#golemreplace","AR1514",0)
+THEN
+RESPONSE #100
+SetGlobal("r#golemreplace","AR1514",1)
+CreateCreature("golkill2",[2533.467],14)
+CreateCreature("golkill2",[2461.433],14)
+CreateCreature("golkill2",[2394.372],14)
+END

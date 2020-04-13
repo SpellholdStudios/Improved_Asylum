@@ -1,0 +1,714 @@
+IF
+ !Allegiance(Myself,ENEMY)
+ CheckStatLT(Myself,5,STONESKINS)
+THEN
+ RESPONSE #100
+  DisplayString(Myself,@80)
+  ApplySpell(Myself,WIZARD_STONE_SKIN)
+  DisplayString(Myself,@81)
+  ApplySpell(Myself,WIZARD_SPELL_TRAP)
+  DisplayString(Myself,@82)
+  ApplySpell(Myself,WIZARD_PROTECTION_FROM_FIRE)
+  DisplayString(Myself,@83)
+  ApplySpell(Myself,WIZARD_PROTECTION_FROM_COLD)
+  DisplayString(Myself,@84)
+  ApplySpell(Myself,WIZARD_PROTECTION_FROM_EVIL)
+END
+
+// Initiate dialogue when player is seen
+IF
+ NumTimesTalkedTo(0)
+ OR(6)
+  Detect(Player1)
+  Detect(Player2)
+  Detect(Player3)
+  Detect(Player4)
+  Detect(Player5)
+  Detect(Player6)
+THEN
+ RESPONSE #100
+  StartDialogNoSet(Player1)
+END
+
+// Set entire party to enemy if one character is attacked
+IF
+ !Allegiance(Myself,ENEMY)
+ OR(4)
+  HPPercentLT(Myself,100)
+  HPPercentLT("R#Anast",100)
+  HPPercentLT("R#Thorde",100)
+  HPPercentLT("R#Drusil01",100)
+THEN
+ RESPONSE #100
+  Enemy()
+  ActionOverride("R#Drusil01",Enemy())
+  ActionOverride("R#Anast",Enemy())
+  ActionOverride("R#Thorde",Enemy())
+  Continue()
+END
+
+IF
+ !Allegiance(Myself,ENEMY)
+ OR(3)
+  Allegiance("R#Anast",ENEMY)
+  Allegiance("R#Thorde",ENEMY)
+  Allegiance("R#Drusil01",ENEMY)
+THEN
+ RESPONSE #100
+  Enemy()
+  ActionOverride("R#Anast",Enemy())
+  ActionOverride("R#Thorde",Enemy())
+  ActionOverride("R#Drusil01",Enemy())
+END
+
+// Go crazy if Anastacia is killed
+IF
+ Dead("R#Anast")
+THEN
+ RESPONSE #100
+  DisplayString(Myself,@62)
+  ReallyForceSpell(LastAttackerOf("R#Anast"),WIZARD_IMPRISONMENT)
+  CallLightning(WeakestOf)
+  ReallyForceSpell(StrongestOf,WIZARD_IMPRISONMENT)
+END
+
+// Buff up at start of fight
+IF
+ Allegiance(Myself,ENEMY)
+ Global("ChainContigency","LOCALS",0)
+THEN
+ RESPONSE #100
+  SetGlobal("ChainContigency","LOCALS",1)
+  DisplayString(Myself,@63)
+  DisplayString(Myself,@68)
+  ApplySpell(Myself,WIZARD_SPELL_IMMUNITY_ABJURATION)
+  DisplayString(Myself,@69)
+  ApplySpell(Myself,WIZARD_SPELL_IMMUNITY_DIVINATION)
+  DisplayString(Myself,@70)
+  ApplySpell(Myself,WIZARD_MISLEAD)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ Global("SpellTrigger","LOCALS",0)
+THEN
+ RESPONSE #100
+  SetGlobal("SpellTrigger","LOCALS",1)
+  DisplayString(Myself,@64)
+  DisplayString(Myself,@65)
+  ReallyForceSpell(Myself,WIZARD_TRUE_SIGHT)
+  DisplayString(Myself,@66)
+  ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  DisplayString(Myself,@67)
+  ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_ENERGY)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ Global("SpellSequencer","LOCALS",0)
+THEN
+ RESPONSE #100
+  SetGlobal("SpellSequencer","LOCALS",1)
+  DisplayString(Myself,@71)
+  DisplayString(Myself,@72)
+  ReallyForceSpell(Myself,WIZARD_FIRE_SHIELD_RED)
+  DisplayString(Myself,@73)
+  ReallyForceSpell(Myself,WIZARD_FIRE_SHIELD_BLUE)
+  DisplayString(Myself,@74)
+  ReallyForceSpellRES("SPWI309",Myself) // ~Monster Summoning I~
+END
+
+// Timestop
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOf(Myself))
+ !GlobalTimerNotExpired("TimeStopCountdown","LOCALS")
+ HaveSpell(WIZARD_TIME_STOP)
+THEN
+ RESPONSE #100
+  RealSetGlobalTimer("TimeStopCountdown","LOCALS",30)
+  Spell(Myself,WIZARD_TIME_STOP)
+  Continue()
+END
+
+// Horrid Wilting
+IF
+  Allegiance(Myself,ENEMY)
+  CheckStatLT(LastSeenBy(Myself),50,MAGICDAMAGERESISTANCE)
+  HaveSpell(WIZARD_ABI_DALZIMS_HORRID_WILTING)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Wilting","LOCALS",1)
+    Spell(LastSeenBy(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)
+    Continue()
+END
+
+// Lower Resistance
+IF
+ Allegiance(Myself,ENEMY)
+ HaveSpell(WIZARD_LOWER_RESISTANCE)
+ CheckStatGT(LastAttackerOf(Myself),35,RESISTMAGIC)
+THEN
+ RESPONSE #100
+  Spell(LastAttackerOf(Myself),WIZARD_LOWER_RESISTANCE)
+END
+
+// Wail of the Banshee
+IF
+ Allegiance(Myself,ENEMY)
+ HaveSpell(WIZARD_WAIL_OF_THE_BANSHEE)
+THEN
+ RESPONSE #100
+  SetGlobal("Banshee","LOCALS",1)
+  Spell(Myself,WIZARD_WAIL_OF_THE_BANSHEE)
+END
+
+// Summon Planetar
+IF
+  Allegiance(Myself,ENEMY)
+  Global("CallHelp","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("CallHelp","LOCALS",1)
+    ForceSpellRES("SPWI923",Myself)  // ~Summon Planetar~
+END
+
+// Dispel some effects on player characters
+IF
+ Allegiance(Myself,ENEMY)
+ HaveSpell(WIZARD_SPELL_STRIKE)
+ OR(2)
+  HasBounceEffects(NearestEnemyOf(Myself))
+  HasImmunityEffects(NearestEnemyOf(Myself))
+THEN
+ RESPONSE #100
+  SetGlobal("Dispel","LOCALS",1)
+  Spell(NearestEnemyOf(Myself),WIZARD_SPELL_STRIKE)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ HaveSpell(WIZARD_SPELL_STRIKE)
+ OR(2)
+  HasBounceEffects(SecondNearestEnemyOf(Myself))
+  HasImmunityEffects(SecondNearestEnemyOf(Myself))
+THEN
+ RESPONSE #100
+  SetGlobal("Dispel","LOCALS",1)
+  Spell(SecondNearestEnemyOf(Myself),WIZARD_SPELL_STRIKE)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ HaveSpell(WIZARD_SPELL_STRIKE)
+ OR(2)
+  HasBounceEffects(ThirdNearestEnemyOf(Myself))
+  HasImmunityEffects(ThirdNearestEnemyOf(Myself))
+THEN
+ RESPONSE #100
+  SetGlobal("Dispel","LOCALS",1)
+  Spell(ThirdNearestEnemyOf(Myself),WIZARD_SPELL_STRIKE)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ HaveSpell(WIZARD_SPELL_STRIKE)
+ OR(2)
+  HasBounceEffects(FourthNearestEnemyOf(Myself))
+  HasImmunityEffects(FourthNearestEnemyOf(Myself))
+THEN
+ RESPONSE #100
+  SetGlobal("Dispel","LOCALS",1)
+  Spell(FourthNearestEnemyOf(Myself),WIZARD_SPELL_STRIKE)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ HaveSpell(WIZARD_SPELL_STRIKE)
+ OR(2)
+  HasBounceEffects(FifthNearestEnemyOf(Myself))
+  HasImmunityEffects(FifthNearestEnemyOf(Myself))
+THEN
+ RESPONSE #100
+  SetGlobal("Dispel","LOCALS",1)
+  Spell(FifthNearestEnemyOf(Myself),WIZARD_SPELL_STRIKE)
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ HaveSpell(WIZARD_SPELL_STRIKE)
+ OR(2)
+  HasBounceEffects(SixthNearestEnemyOf(Myself))
+  HasImmunityEffects(SixthNearestEnemyOf(Myself))
+THEN
+ RESPONSE #100
+  SetGlobal("Dispel","LOCALS",1)
+  Spell(SixthNearestEnemyOf(Myself),WIZARD_SPELL_STRIKE)
+END
+
+// Use the Staff of the Magi if invisibility isn't active
+IF
+ !StateCheck(Myself,STATE_INVISIBLE)
+THEN
+ RESPONSE #100
+  ApplySpell(Myself,WIZARD_INVISIBILITY)
+  ApplySpell(Myself,WIZARD_PROTECTION_FROM_EVIL)
+END
+
+// Death spell summoned creatures
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOfType([GOODCUTOFF.0.0.0.0.SUMMONED]))
+ HaveSpell(WIZARD_DEATH_SPELL)
+THEN
+ RESPONSE #100
+  Spell(LastSeenBy(Myself),WIZARD_DEATH_SPELL)
+END
+
+// Cast Chaos on player
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOf(Myself))
+ CheckStatGT(NearestEnemyOf(Myself),1,SAVEVSSPELL)
+ !HasItemEquiped("AMUL17",LastSeenBy(Myself))
+ !HasItemEquiped("LEAT20",LastSeenBy(Myself))
+ !HasItemEquiped("SHLD25",LastSeenBy(Myself))
+ !HasItemEquipedReal("SW1H54",LastSeenBy(Myself))
+ !HasItemEquipedReal("SW2H14",LastSeenBy(Myself))
+ !HasItemEquipedReal("SW2H21",LastSeenBy(Myself))
+ HaveSpell(WIZARD_CHAOS)
+THEN
+ RESPONSE #100
+  Spell(NearestEnemyOf(Myself),WIZARD_CHAOS)
+END
+
+// Finger of Death
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOfType([PC]))
+ CheckStatGT(NearestEnemyOfType([PC]),1,SAVEVSSPELL)
+ !HasItemEquiped("CLCK26",NearestEnemyOfType([PC]))
+ CheckStat(NearestEnemyOfType([PC]),0,SCRIPTINGSTATE2)
+ HaveSpell(WIZARD_FINGER_OF_DEATH)
+THEN
+ RESPONSE #100
+  Spell(NearestEnemyOfType([PC]),WIZARD_FINGER_OF_DEATH)
+END
+
+// Mordenkainen's Sword
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOf(Myself))
+ RandomNum(2,1)
+ HaveSpell(WIZARD_MORDENKAINENS_SWORD)
+THEN
+ RESPONSE #100
+  Spell(Myself,WIZARD_MORDENKAINENS_SWORD)
+END
+
+// Simulacrum
+IF
+ Allegiance(Myself,ENEMY)
+ Detect(NearestEnemyOf(Myself))
+ RandomNum(2,2)
+ HaveSpell(WIZARD_SIMULACRUM)
+THEN
+ RESPONSE #100
+  Spell(Myself,WIZARD_SIMULACRUM)
+END
+
+// Try to dominate StrongestOf
+IF
+ CheckStatGT(StrongestOf,1,SAVEVSSPELL)
+ Allegiance(Myself,ENEMY)
+ See(StrongestOf)
+ !HasItemEquiped("HELM06",StrongestOf)
+ !HasItemEquiped("MISCBC",StrongestOf)
+ !HasItemEquiped("NPCHAN",StrongestOf)
+ !HasItemEquiped("REAVER",StrongestOf)
+ !HasItemEquiped("SHLD25",StrongestOf)
+ !HasItemEquipedReal("SPER07",StrongestOf)
+ !HasItemEquipedReal("SW1H35",StrongestOf)
+ !HasItemEquipedReal("SW1H54",StrongestOf)
+ !HasItemEquipedReal("SW2H14",StrongestOf)
+ !Kit(StrongestOf,INQUISITOR)
+ HaveSpell(WIZARD_DOMINATION)
+THEN
+ RESPONSE #100
+  SetGlobal("Dominate","LOCALS",1)
+  Spell(StrongestOf,WIZARD_DOMINATION)
+END
+
+// Dispel negative effects on own party
+IF
+ OR(4)
+  StateCheck("R#Anast",STATE_SLEEPING)
+  StateCheck("R#Anast",STATE_CHARMED)
+  StateCheck("R#Anast",STATE_STUNNED)
+  StateCheck("R#Anast",STATE_PANIC)
+ HaveSpell(WIZARD_DISPEL_MAGIC)
+THEN
+ RESPONSE #100
+  Spell("R#Anast",WIZARD_DISPEL_MAGIC)
+END
+
+IF
+ OR(4)
+  StateCheck("R#Thorde",STATE_SLEEPING)
+  StateCheck("R#Thorde",STATE_CHARMED)
+  StateCheck("R#Thorde",STATE_STUNNED)
+  StateCheck("R#Thorde",STATE_PANIC)
+ HaveSpell(WIZARD_DISPEL_MAGIC)
+THEN
+ RESPONSE #100
+  Spell("R#Thorde",WIZARD_DISPEL_MAGIC)
+END
+
+IF
+ OR(4)
+  StateCheck("R#Drusil01",STATE_SLEEPING)
+  StateCheck("R#Drusil01",STATE_CHARMED)
+  StateCheck("R#Drusil01",STATE_STUNNED)
+  StateCheck("R#Drusil01",STATE_PANIC)
+ HaveSpell(WIZARD_DISPEL_MAGIC)
+THEN
+ RESPONSE #100
+  Spell("R#Drusil01",WIZARD_DISPEL_MAGIC)
+END
+
+// Maze
+IF
+ Allegiance(Myself,ENEMY)
+ !CheckStatGT(NearestEnemyOf(Myself),50,RESISTMAGIC)
+ HaveSpell(WIZARD_MAZE)
+THEN
+ RESPONSE #100
+  Spell(NearestEnemyOf(Myself),WIZARD_MAZE)
+END
+
+// Dominate NearestEnemyOf(Myself)
+IF
+ CheckStatGT(NearestEnemyOf(Myself),1,SAVEVSSPELL)
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOf(Myself))
+ !HasItemEquiped("HELM06",NearestEnemyOf(Myself))
+ !HasItemEquiped("MISCBC",NearestEnemyOf(Myself))
+ !HasItemEquiped("NPCHAN",NearestEnemyOf(Myself))
+ !HasItemEquiped("REAVER",NearestEnemyOf(Myself))
+ !HasItemEquiped("SHLD25",NearestEnemyOf(Myself))
+ !HasItemEquipedReal("SPER07",NearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW1H35",NearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW1H54",NearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW2H14",NearestEnemyOf(Myself))
+ !Kit(NearestEnemyOf(Myself),INQUISITOR)
+ HaveSpell(WIZARD_DOMINATION)
+THEN
+ RESPONSE #100
+  Spell(NearestEnemyOf(Myself),WIZARD_DOMINATION)
+END
+
+IF
+ CheckStatGT(SecondNearestEnemyOf(Myself),1,SAVEVSSPELL)
+ Allegiance(Myself,ENEMY)
+ See(SecondNearestEnemyOf(Myself))
+ !HasItemEquiped("HELM06",SecondNearestEnemyOf(Myself))
+ !HasItemEquiped("MISCBC",SecondNearestEnemyOf(Myself))
+ !HasItemEquiped("NPCHAN",SecondNearestEnemyOf(Myself))
+ !HasItemEquiped("REAVER",SecondNearestEnemyOf(Myself))
+ !HasItemEquiped("SHLD25",SecondNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SPER07",SecondNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW1H35",SecondNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW1H54",SecondNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW2H14",SecondNearestEnemyOf(Myself))
+ !Kit(SecondNearestEnemyOf(Myself),INQUISITOR)
+ HaveSpell(WIZARD_DOMINATION)
+THEN
+ RESPONSE #100
+  Spell(SecondNearestEnemyOf(Myself),WIZARD_DOMINATION)
+END
+
+IF
+ CheckStatGT(ThirdNearestEnemyOf(Myself),1,SAVEVSSPELL)
+ Allegiance(Myself,ENEMY)
+ See(ThirdNearestEnemyOf(Myself))
+ !HasItemEquiped("HELM06",ThirdNearestEnemyOf(Myself))
+ !HasItemEquiped("MISCBC",ThirdNearestEnemyOf(Myself))
+ !HasItemEquiped("NPCHAN",ThirdNearestEnemyOf(Myself))
+ !HasItemEquiped("REAVER",ThirdNearestEnemyOf(Myself))
+ !HasItemEquiped("SHLD25",ThirdNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SPER07",ThirdNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW1H35",ThirdNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW1H54",ThirdNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW2H14",ThirdNearestEnemyOf(Myself))
+ !Kit(ThirdNearestEnemyOf(Myself),INQUISITOR)
+ HaveSpell(WIZARD_DOMINATION)
+THEN
+ RESPONSE #100
+  Spell(ThirdNearestEnemyOf(Myself),WIZARD_DOMINATION)
+END
+
+IF
+ CheckStatGT(FourthNearestEnemyOf(Myself),1,SAVEVSSPELL)
+ Allegiance(Myself,ENEMY)
+ See(FourthNearestEnemyOf(Myself))
+ !HasItemEquiped("HELM06",FourthNearestEnemyOf(Myself))
+ !HasItemEquiped("MISCBC",FourthNearestEnemyOf(Myself))
+ !HasItemEquiped("NPCHAN",FourthNearestEnemyOf(Myself))
+ !HasItemEquiped("REAVER",FourthNearestEnemyOf(Myself))
+ !HasItemEquiped("SHLD25",FourthNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SPER07",FourthNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW1H35",FourthNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW1H54",FourthNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW2H14",FourthNearestEnemyOf(Myself))
+ !Kit(FourthNearestEnemyOf(Myself),INQUISITOR)
+ HaveSpell(WIZARD_DOMINATION)
+THEN
+ RESPONSE #100
+  Spell(FourthNearestEnemyOf(Myself),WIZARD_DOMINATION)
+END
+
+IF
+ CheckStatGT(FifthNearestEnemyOf(Myself),1,SAVEVSSPELL)
+ Allegiance(Myself,ENEMY)
+ See(FifthNearestEnemyOf(Myself))
+ !HasItemEquiped("HELM06",FifthNearestEnemyOf(Myself))
+ !HasItemEquiped("MISCBC",FifthNearestEnemyOf(Myself))
+ !HasItemEquiped("NPCHAN",FifthNearestEnemyOf(Myself))
+ !HasItemEquiped("REAVER",FifthNearestEnemyOf(Myself))
+ !HasItemEquiped("SHLD25",FifthNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SPER07",FifthNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW1H35",FifthNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW1H54",FifthNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW2H14",FifthNearestEnemyOf(Myself))
+ !Kit(FifthNearestEnemyOf(Myself),INQUISITOR)
+ HaveSpell(WIZARD_DOMINATION)
+THEN
+ RESPONSE #100
+  Spell(FifthNearestEnemyOf(Myself),WIZARD_DOMINATION)
+END
+
+IF
+ CheckStatGT(SixthNearestEnemyOf(Myself),1,SAVEVSSPELL)
+ Allegiance(Myself,ENEMY)
+ See(SixthNearestEnemyOf(Myself))
+ !HasItemEquiped("HELM06",SixthNearestEnemyOf(Myself))
+ !HasItemEquiped("MISCBC",SixthNearestEnemyOf(Myself))
+ !HasItemEquiped("NPCHAN",SixthNearestEnemyOf(Myself))
+ !HasItemEquiped("REAVER",SixthNearestEnemyOf(Myself))
+ !HasItemEquiped("SHLD25",SixthNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SPER07",SixthNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW1H35",SixthNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW1H54",SixthNearestEnemyOf(Myself))
+ !HasItemEquipedReal("SW2H14",SixthNearestEnemyOf(Myself))
+ !Kit(SixthNearestEnemyOf(Myself),INQUISITOR)
+ HaveSpell(WIZARD_DOMINATION)
+THEN
+ RESPONSE #100
+  Spell(SixthNearestEnemyOf(Myself),WIZARD_DOMINATION)
+END
+
+// Hold on player
+IF
+ Allegiance(Myself,ENEMY)
+ CheckStatGT(LastAttackerOf(Myself),1,SAVEVSSPELL)
+ !Kit(LastAttackerOf(Myself),INQUISITOR)
+ OR(6)
+  Class(LastAttackerOf(Myself),RANGER_ALL)
+  Class(LastAttackerOf(Myself),FIGHTER_ALL)
+  Class(LastAttackerOf(Myself),PALADIN)
+  Class(LastAttackerOf(Myself),THIEF_ALL)
+  Kit(LastAttackerOf(Myself),BARBARIAN)
+  Kit(LastAttackerOf(Myself),CAVALIER)
+ See(LastAttackerOf(Myself))
+ !StateCheck(LastAttackerOf(Myself),STATE_CHARMED)
+ HaveSpell(WIZARD_HOLD_PERSON)
+ !HasItemEquiped("FREERING",LastSeenBy(Myself))
+ !HasItemEquiped("ROSSRING",LastSeenBy(Myself))
+ !HasItemEquiped("RING09",LastSeenBy(Myself))
+ !HasItemEquiped("NPSW01",LastSeenBy(Myself))
+ !Gender(LastAttackerOf(Myself),SUMMONED)
+THEN
+ RESPONSE #100
+  SetGlobal("Hold","LOCALS",1)
+  Spell(LastAttackerOf(Myself),WIZARD_HOLD_PERSON)
+END
+
+// Sunfire
+IF
+ Allegiance(Myself,ENEMY)
+ Range(NearestEnemyOf(Myself),30)
+ Range(SecondNearestEnemyOf(Myself),30)
+ Range(ThirdNearestEnemyOf(Myself),30)
+ HaveSpell(WIZARD_SUN_FIRE)
+THEN
+ RESPONSE #100
+  Spell(Myself,WIZARD_SUN_FIRE)
+END
+
+// Heal all characters to max if cannot see player
+IF
+ !Detect(NearestEnemyOf(Myself))
+ CombatCounter(0)
+ OR(4)
+  HPPercentLT(Myself,100)
+  HPPercentLT("R#Anast",100)
+  HPPercentLT("R#Thorde",100)
+  HPPercentLT("R#Drusil01",100)
+THEN
+ RESPONSE #100
+  ReallyForceSpell(Myself,CLERIC_HEAL)
+  ReallyForceSpell("R#Anast",CLERIC_HEAL)
+  ReallyForceSpell("R#Thorde",CLERIC_HEAL)
+  ReallyForceSpell("R#Drusil01",CLERIC_HEAL)
+END
+
+// Comet on nearest enemy
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOf(Myself))
+ HaveSpell(WIZARD_COMET)
+THEN
+ RESPONSE #100
+  SetGlobal("MassAOE","LOCALS",1)
+  Spell(NearestEnemyOf(Myself),WIZARD_COMET)
+END
+
+// Cheese detection - attack nearest enemy if can't see any
+IF
+ Global("R#Cheese","GLOBAL",0)
+ OR(4)
+  !Detect(NearestEnemyOf(Myself))
+  !Detect(NearestEnemyOf("R#Anast"))
+  !Detect(NearestEnemyOf("R#Thorde"))
+  !Detect(NearestEnemyOf("R#Drusil01"))
+ !GlobalTimerNotExpired("R#CheeseDetection","LOCALS")
+THEN
+ RESPONSE #100
+  Attack(NearestEnemyOf(Myself))
+  ActionOverride("R#Anast",Attack(NearestEnemyOf(Myself)))
+  ActionOverride("R#Thorde",Attack(NearestEnemyOf(Myself)))
+  ActionOverride("R#Drusil01",Attack(NearestEnemyOf(Myself)))
+  SetGlobal("R#Cheese","GLOBAL",1)
+  SetGlobalTimer("R#CheeseDetection","LOCALS",15)
+END
+
+IF
+ OR(4)
+  Detect(NearestEnemyOf(Myself))
+  Detect(NearestEnemyOf("R#Anast"))
+  Detect(NearestEnemyOf("R#Thorde"))
+  Detect(NearestEnemyOf("R#Drusil01"))
+ Global("R#Cheese","GLOBAL",1)
+ GlobalTimerExpired("R#CheeseDetection","LOCALS")
+THEN
+ RESPONSE #100
+  SetGlobal("R#Cheese","GLOBAL",0)
+  ClearAllActions()
+END
+
+// Spell sequencer - Magic Missile
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOfType([PC]))
+ CheckStatLT(NearestEnemyOfType([PC]),50,RESISTMAGIC)
+ Global("MinorSequencer","LOCALS",0)
+ !Name("Jaheira",NearestEnemyOfType([PC]))
+THEN
+ RESPONSE #100
+  SetGlobal("MinorSequencer","LOCALS",1)
+  DisplayString(Myself,@75)
+  DisplayString(Myself,@76)
+  ReallyForceSpell(NearestEnemyOfType([PC]),WIZARD_MAGIC_MISSILE)
+  DisplayString(Myself,@76)
+  ReallyForceSpell(NearestEnemyOfType([PC]),WIZARD_MAGIC_MISSILE)
+END
+
+// Spell Trap if don't have it up
+IF
+ Allegiance(Myself,ENEMY)
+ CheckStat(Myself,0,WIZARD_SPELL_TRAP)
+ HaveSpell(WIZARD_SPELL_TRAP)
+THEN
+ RESPONSE #100
+  Spell(Myself,WIZARD_SPELL_TRAP)
+END
+
+// Imprison nearest enemy
+IF
+ See(NearestEnemyOf(Myself))
+ Allegiance(Myself,ENEMY)
+ HaveSpell(WIZARD_IMPRISONMENT)
+THEN
+ RESPONSE #100
+  Spell(NearestEnemyOf(Myself),WIZARD_IMPRISONMENT)
+END
+
+// Reset contingency
+IF
+ Allegiance(Myself,ENEMY)
+ Global("Contigency2","LOCALS",0)
+THEN
+ RESPONSE #100
+  SetGlobal("Contigency2","LOCALS",1)
+  ForceSpellRES("R#IACCY",Myself)
+END
+
+IF
+ Global("Contigency2","LOCALS",1)
+ HPPercentLT(Myself,50)
+THEN
+ RESPONSE #100
+  SetGlobal("Contigency2","LOCALS",2)
+  DisplayString(Myself,@63)
+  DisplayString(Myself,@77)
+  ReallyForceSpell(Myself,WIZARD_ABI_DALZIMS_HORRID_WILTING)
+  DisplayString(Myself,@78)
+  ApplySpell(Myself,WIZARD_STONE_SKIN)
+  DisplayString(Myself,@79)
+  ApplySpell(Myself,WIZARD_IMPROVED_MANTLE)
+END
+
+// Meteor Swarm
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOf(Myself))
+ HaveSpell(WIZARD_METEOR_SWARM)
+THEN
+ RESPONSE #100
+  Spell(NearestEnemyOf(Myself),WIZARD_METEOR_SWARM)
+END
+
+// Energy Drain on Nearest Enemy
+IF
+ Allegiance(Myself,ENEMY)
+ See(NearestEnemyOfType([PC]))
+ !HasItemEquiped("AMUL26",NearestEnemyOfType([PC]))
+ HaveSpell(WIZARD_ENERGY_DRAIN)
+THEN
+ RESPONSE #100
+  Spell(NearestEnemyOfType([PC]),WIZARD_ENERGY_DRAIN)
+END
+
+// Mordenkainen's Sword on Player 1
+IF
+ Allegiance(Myself,ENEMY)
+ See(Player1)
+ HaveSpell(WIZARD_MORDENKAINENS_SWORD)
+THEN
+ RESPONSE #100
+  Spell(Player1,WIZARD_MORDENKAINENS_SWORD)
+END
+
+// Reset all spells
+IF
+ InMyArea(Player1)
+ PartyRested()
+THEN
+ RESPONSE #100
+  SetGlobal("ChainContigency","LOCALS",0)
+  SetGlobal("SpellSequencer","LOCALS",0)
+  SetGlobal("SpellTrigger","LOCALS",0)
+  SetGlobal("MinorSequencer","LOCALS",0)
+  SetGlobal("Contigency2","LOCALS",0)
+  Rest()
+END

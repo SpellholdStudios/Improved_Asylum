@@ -1,0 +1,48 @@
+Thordek:
+- Now has 3 Potions of Superior Healing (POTN55)
+- Now sees invisible opponents
+- Axe of the Elven Scalp no longer has Protection from Elves as an Equipping Effect
+- Now has Protection from Elves as an effect on his CRE file
+- Axe of the Elven Scalp no longer confers immunity to level 2 or lower spells
+- Now has immunity to level 2 or lower spells as an effect on his CRE file
+- Now will fight back in combat and chooses target
+
+Anastacia:
+- Sword of Braldain no longer has immunity to Time Stop
+- Now has Immunity to Time Stop as an effect on her CRE file
+- Removed shout from creature script
+
+Breudayael:
+- Will no longer chain cast Time Stop when the player cannot be seen
+- At least thirty seconds must pass between casting of Time Stops
+- No longer crashes the game when he casts Chain Contingency refresh
+- No longer has unlimited Lower Resistance
+- Remove all ForceSpells and make spellcasting interruptible
+- Granted Immunity to Incendiary Cloud
+
+Drusilia:
+- Removed permanent Improved Alacrity
+- Removed all ForceSpells and made spellcasting interruptible
+- Granted Immunity to Incendiary Cloud
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+TO BE ADDED
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Anastacia:
+- Upon death of Breudayael, uses Berserk Fury ability.  This grants her the following:
+  1. Attacks per round are set to 10
+  2. Every hit is a critical strike
+  3. Immunity to any form of hold, slow, or charm
+  4. Locked onto the person that killed Breudayael. She cannot be swayed from this mission of killing that person
+- Give ability to be able to teleport to Breudayael if she cannot see him and he isn't dead
+- Change script so that Insect Plague targets more than just fighters
+
+Thordek:
+- Finish AI script
+- Give him thrown axes or a bow to use if out of range from enemies
+- Return to spawn point, knocking over anything in the way if he cannot see Breudayael or is not fighting something else
+
+Breudayael:
+- Remove unlimited timestops and improve casting script for them
+- Fix immunities on robe

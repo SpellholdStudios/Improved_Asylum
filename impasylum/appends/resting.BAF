@@ -1,0 +1,32 @@
+IF
+  AreaCheck("AR1513")
+  RandomNum(6,1)
+THEN
+  RESPONSE #100
+    CreateCreatureObject("r#crazy",Myself,0,0,0)
+    CreateCreatureObject("fshorde1",Myself,0,0,0)
+    CreateCreatureObject("fshorde1",Myself,0,0,0)
+    CreateCreatureObject("fshorde1",Myself,0,0,0)
+END
+
+IF
+  AreaCheck("AR1513")
+  RandomNum(6,2)
+THEN
+  RESPONSE #100
+    CreateCreatureObject("yssold16",Myself,0,0,0)
+    CreateCreatureObject("elfir01",Myself,0,0,0)
+    CreateCreatureObject("elfir01",Myself,0,0,0)
+END
+
+IF
+  AreaCheck("AR1513")
+  RandomNum(6,3)
+THEN
+  RESPONSE #100
+    CreateCreatureObject("drow03",Myself,0,0,0)
+    CreateCreatureObject("drow01",Myself,0,0,0)
+    CreateCreatureObject("drow01",Myself,0,0,0)
+    CreateCreatureObject("drow04",Myself,0,0,0)
+END
+

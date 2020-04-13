@@ -1,0 +1,42 @@
+IF
+  HasItemEquiped("r#wedrin",Player1)
+THEN
+  RESPONSE #100
+    CallLightning(Player1)
+END
+
+IF
+  HasItemEquiped("r#wedrin",Player2)
+THEN
+  RESPONSE #100
+    CallLightning(Player2)
+END
+
+IF
+  HasItemEquiped("r#wedrin",Player3)
+THEN
+  RESPONSE #100
+    CallLightning(Player3)
+END
+
+IF
+  HasItemEquiped("r#wedrin",Player4)
+THEN
+  RESPONSE #100
+    CallLightning(Player4)
+END
+
+IF
+  HasItemEquiped("r#wedrin",Player5)
+THEN
+  RESPONSE #100
+    CallLightning(Player5)
+END
+
+IF
+  HasItemEquiped("r#wedrin",Player6)
+THEN
+  RESPONSE #100
+    CallLightning(Player6)
+END
+

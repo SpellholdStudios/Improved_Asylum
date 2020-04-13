@@ -1,0 +1,791 @@
+IF
+  Global("CreateUmberHulks","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("CreateUmberHulks","LOCALS",1)
+    CreateCreatureObject("r#umber",Myself,0,0,0)
+    CreateCreatureObject("r#umber",Myself,0,0,0)
+    CreateCreatureObject("r#umber",Myself,0,0,0)
+    CreateCreatureObject("r#umber",Myself,0,0,0)
+END
+
+IF
+  Name("r#mage02",Myself)
+  Global("Trap","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Trap","LOCALS",1)
+    ForceSpellPoint([848.826],WIZARD_SKULL_TRAP)
+END
+
+IF
+  CheckStatLT(Myself,1,STONESKINS)
+  GlobalLT("Stoneskin","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Stoneskin","LOCALS",1)
+    ForceSpell(Myself,WIZARD_STONE_SKIN)
+END
+
+IF
+  See([PC])
+  Global("FightPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("FightPrep","LOCALS",1)
+    ApplySpell(Myself,WIZARD_SPELL_TRAP)
+    ApplySpell(Myself,WIZARD_SPELL_IMMUNITY_ABJURATION)
+    ApplySpell(Myself,WIZARD_SPELL_TURNING)
+    ApplySpell(Myself,WIZARD_MELF_METEOR)
+    ApplySpell(Myself,WIZARD_BLUR)
+END
+
+IF
+  StateCheck(Myself,STATE_SILENCED)
+  Global("Vocalize","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Vocalize","LOCALS",1)
+    ForceSpell(Myself,WIZARD_VOCALIZE)
+END
+
+IF
+  CombatCounterGT(0)
+  Global("SpellTrigger","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("SpellTrigger","LOCALS",1)
+    DisplayString(Myself,@64)
+    DisplayString(Myself,@85)
+    ApplySpell(Myself,WIZARD_MISLEAD)
+    DisplayString(Myself,@65)
+    ApplySpell(Myself,WIZARD_TRUE_SIGHT)
+    DisplayString(Myself,@86)
+    ForceSpell(Myself,WIZARD_TELEPORT_FIELD)
+END
+
+IF
+  AttackedBy([GOODCUTOFF],DEFAULT)
+  Global("Fireshields","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Fireshields","LOCALS",1)
+    ForceSpell(Myself,WIZARD_FIRE_SHIELD_RED)
+    Wait(6)
+    ForceSpell(Myself,WIZARD_FIRE_SHIELD_BLUE)
+END
+
+IF
+  See(NearestEnemyOfType([GOODCUTOFF.0.0.0.0.SUMMONED]))
+  GlobalLT("DeathSpell","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("DeathSpell","LOCALS",1)
+    ForceSpell(NearestEnemyOfType([GOODCUTOFF.0.0.0.0.SUMMONED]),WIZARD_DEATH_SPELL)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(NearestEnemyOf(Myself),50,MAGICDAMAGERESISTANCE)
+  GlobalLT("Wilting","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Wilting","LOCALS",1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)
+    Continue()
+END
+
+IF
+  See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  Global("Hakeashar","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Hakeashar","LOCALS",1)
+    ForceSpell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_SUMMON_HAKEASHAR)
+END
+
+IF
+  See(FourthNearestEnemyOf(Myself))
+  Global("Banshee","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Banshee","LOCALS",1)
+    ForceSpell(Myself,WIZARD_WAIL_OF_THE_BANSHEE)
+END
+
+IF
+  HPPercentLT(Myself,50)
+  Global("WeaponProtection","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("WeaponProtection","LOCALS",1)
+    ForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  CheckStatGT(NearestEnemyOf(Myself),50,RESISTMAGIC)
+  GlobalLT("LowerResist","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LowerResist","LOCALS",1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_LOWER_RESISTANCE)
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  CheckStatGT(SecondNearestEnemyOf(Myself),50,RESISTMAGIC)
+  GlobalLT("LowerResist","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LowerResist","LOCALS",1)
+    ForceSpell(SecondNearestEnemyOf(Myself),WIZARD_LOWER_RESISTANCE)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  CheckStatGT(ThirdNearestEnemyOf(Myself),50,RESISTMAGIC)
+  GlobalLT("LowerResist","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LowerResist","LOCALS",1)
+    ForceSpell(ThirdNearestEnemyOf(Myself),WIZARD_LOWER_RESISTANCE)
+END
+
+IF
+  See(FourthNearestEnemyOf(Myself))
+  CheckStatGT(FourthNearestEnemyOf(Myself),50,RESISTMAGIC)
+  GlobalLT("LowerResist","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LowerResist","LOCALS",1)
+    ForceSpell(FourthNearestEnemyOf(Myself),WIZARD_LOWER_RESISTANCE)
+END
+
+IF
+  See(FifthNearestEnemyOf(Myself))
+  CheckStatGT(FifthNearestEnemyOf(Myself),50,RESISTMAGIC)
+  GlobalLT("LowerResist","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LowerResist","LOCALS",1)
+    ForceSpell(FifthNearestEnemyOf(Myself),WIZARD_LOWER_RESISTANCE)
+END
+
+IF
+  See(SixthNearestEnemyOf(Myself))
+  CheckStatGT(SixthNearestEnemyOf(Myself),50,RESISTMAGIC)
+  GlobalLT("LowerResist","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LowerResist","LOCALS",1)
+    ForceSpell(SixthNearestEnemyOf(Myself),WIZARD_LOWER_RESISTANCE)
+END
+
+IF
+  See(StrongestOf)
+  Global("Malison","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Malison","LOCALS",1)
+    ForceSpell(StrongestOf,WIZARD_GREATER_MALISON)
+END
+
+IF
+  See(StrongestOf)
+  Global("Maze","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Maze","LOCALS",1)
+    ForceSpell(StrongestOf,WIZARD_MAZE)
+END
+
+IF
+  See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  OR(2)
+    HasImmunityEffects(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+    HasBounceEffects(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  Global("Pierce","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Pierce","LOCALS",1)
+    ForceSpell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_PIERCE_MAGIC)
+END
+
+IF
+  See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  OR(2)
+    HasBounceEffects(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+    HasImmunityEffects(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  Global("Whip","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Whip","LOCALS",1)
+    ForceSpell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_WARDING_WHIP)
+END
+
+IF
+  See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  !HasBounceEffects(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  !HasImmunityEffects(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  Global("Feeblemind","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Feeblemind","LOCALS",1)
+    ForceSpell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_FEEBLEMIND)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(NearestEnemyOf(Myself),1,SAVEVSSPELL)
+  !HasBounceEffects(NearestEnemyOf(Myself))
+  !HasImmunityEffects(NearestEnemyOf(Myself))
+  GlobalLT("Finger","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Finger","LOCALS",1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  !HasBounceEffects(SecondNearestEnemyOf(Myself))
+  !HasImmunityEffects(SecondNearestEnemyOf(Myself))
+  GlobalLT("Finger","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Finger","LOCALS",1)
+    ForceSpell(SecondNearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  !HasBounceEffects(ThirdNearestEnemyOf(Myself))
+  !HasImmunityEffects(ThirdNearestEnemyOf(Myself))
+  GlobalLT("Finger","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Finger","LOCALS",1)
+    ForceSpell(ThirdNearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+  See(FourthNearestEnemyOf(Myself))
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  !HasBounceEffects(FourthNearestEnemyOf(Myself))
+  !HasImmunityEffects(FourthNearestEnemyOf(Myself))
+  GlobalLT("Finger","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Finger","LOCALS",1)
+    ForceSpell(FourthNearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+  See(FifthNearestEnemyOf(Myself))
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  !HasBounceEffects(FifthNearestEnemyOf(Myself))
+  !HasImmunityEffects(FifthNearestEnemyOf(Myself))
+  GlobalLT("Finger","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Finger","LOCALS",1)
+    ForceSpell(FifthNearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+  See(SixthNearestEnemyOf(Myself))
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  !HasBounceEffects(SixthNearestEnemyOf(Myself))
+  !HasImmunityEffects(SixthNearestEnemyOf(Myself))
+  GlobalLT("Finger","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Finger","LOCALS",1)
+    ForceSpell(SixthNearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(NearestEnemyOf(Myself),50,RESISTELECTRICITY)
+  Global("ChainLightning","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("ChainLightning","LOCALS",1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_CHAIN_LIGHTNING)
+END
+
+IF
+  See(Player1)
+  Global("Mordy","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Mordy","LOCALS",1)
+    ForceSpell(Player1,WIZARD_MORDENKAINENS_SWORD)
+END
+
+IF
+  See(StrongestOf)
+  GlobalLT("Prismatic","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Prismatic","LOCALS",1)
+    ForceSpell(StrongestOf,WIZARD_PRISMATIC_SPRAY)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !HasImmunityEffects(NearestEnemyOf(Myself))
+  !HasBounceEffects(NearestEnemyOf(Myself))
+  Global("Chaos","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Chaos","LOCALS",1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_CHAOS)
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !HasImmunityEffects(SecondNearestEnemyOf(Myself))
+  !HasBounceEffects(SecondNearestEnemyOf(Myself))
+  Global("Chaos","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Chaos","LOCALS",1)
+    ForceSpell(SecondNearestEnemyOf(Myself),WIZARD_CHAOS)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !HasImmunityEffects(ThirdNearestEnemyOf(Myself))
+  !HasBounceEffects(ThirdNearestEnemyOf(Myself))
+  Global("Chaos","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Chaos","LOCALS",1)
+    ForceSpell(ThirdNearestEnemyOf(Myself),WIZARD_CHAOS)
+END
+
+IF
+  See(FourthNearestEnemyOf(Myself))
+  !HasImmunityEffects(FourthNearestEnemyOf(Myself))
+  !HasBounceEffects(FourthNearestEnemyOf(Myself))
+  Global("Chaos","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Chaos","LOCALS",1)
+    ForceSpell(FourthNearestEnemyOf(Myself),WIZARD_CHAOS)
+END
+
+IF
+  See(FifthNearestEnemyOf(Myself))
+  !HasImmunityEffects(FifthNearestEnemyOf(Myself))
+  !HasBounceEffects(FifthNearestEnemyOf(Myself))
+  Global("Chaos","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Chaos","LOCALS",1)
+    ForceSpell(FifthNearestEnemyOf(Myself),WIZARD_CHAOS)
+END
+
+IF
+  See(SixthNearestEnemyOf(Myself))
+  !HasImmunityEffects(SixthNearestEnemyOf(Myself))
+  !HasBounceEffects(SixthNearestEnemyOf(Myself))
+  Global("Chaos","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Chaos","LOCALS",1)
+    ForceSpell(SixthNearestEnemyOf(Myself),WIZARD_CHAOS)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),30)
+  Range(SecondNearestEnemyOf(Myself),30)
+  Range(ThirdNearestEnemyOf(Myself),30)
+  Global("Sunfire","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Sunfire","LOCALS",1)
+    ForceSpell(Myself,WIZARD_SUN_FIRE)
+END
+
+IF
+  See(Player1)
+  !HasImmunityEffects(Player1)
+  !Class(Player1,PALADIN_ALL)
+  Global("Contagion","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Contagion","LOCALS",1)
+    ForceSpell(Player1,WIZARD_CONTAGION)
+END
+
+IF
+  AttackedBy(StrongestOf,DEFAULT)
+  See(StrongestOf)
+  Global("Sphere","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Sphere","LOCALS",1)
+    ForceSpell(StrongestOf,WIZARD_OTILUKES_RESILIENT_SPHERE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  See(SecondNearestEnemyOf(Myself))
+  See(ThirdNearestEnemyOf(Myself))
+  !HasImmunityEffects(NearestEnemyOf(Myself))
+  Global("Hopelessness","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Hopelessness","LOCALS",1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_EMOTION_HOPELESSNESS)
+END
+
+IF
+  CheckStatGT(NearestEnemyOf(Myself),1,SAVEVSSPELL)
+  See(NearestEnemyOf(Myself))
+  !HasItemEquiped("HELM06",NearestEnemyOf(Myself))
+  !HasItemEquiped("MISCBC",NearestEnemyOf(Myself))
+  !HasItemEquiped("NPCHAN",NearestEnemyOf(Myself))
+  !HasItemEquiped("REAVER",NearestEnemyOf(Myself))
+  !HasItemEquiped("SHLD25",NearestEnemyOf(Myself))
+  !HasItemEquipedReal("SPER07",NearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H35",NearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H54",NearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW2H14",NearestEnemyOf(Myself))
+  !Kit(NearestEnemyOf(Myself),INQUISITOR)
+  Global("Dominate","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Dominate","LOCALS",1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_DOMINATION)
+END
+
+IF
+  CheckStatGT(SecondNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  See(SecondNearestEnemyOf(Myself))
+  !HasItemEquiped("HELM06",SecondNearestEnemyOf(Myself))
+  !HasItemEquiped("MISCBC",SecondNearestEnemyOf(Myself))
+  !HasItemEquiped("NPCHAN",SecondNearestEnemyOf(Myself))
+  !HasItemEquiped("REAVER",SecondNearestEnemyOf(Myself))
+  !HasItemEquiped("SHLD25",SecondNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SPER07",SecondNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H35",SecondNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H54",SecondNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW2H14",SecondNearestEnemyOf(Myself))
+  !Kit(SecondNearestEnemyOf(Myself),INQUISITOR)
+  Global("Dominate","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Dominate","LOCALS",1)
+    ForceSpell(SecondNearestEnemyOf(Myself),WIZARD_DOMINATION)
+END
+
+IF
+  CheckStatGT(ThirdNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  See(ThirdNearestEnemyOf(Myself))
+  !HasItemEquiped("HELM06",ThirdNearestEnemyOf(Myself))
+  !HasItemEquiped("MISCBC",ThirdNearestEnemyOf(Myself))
+  !HasItemEquiped("NPCHAN",ThirdNearestEnemyOf(Myself))
+  !HasItemEquiped("REAVER",ThirdNearestEnemyOf(Myself))
+  !HasItemEquiped("SHLD25",ThirdNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SPER07",ThirdNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H35",ThirdNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H54",ThirdNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW2H14",ThirdNearestEnemyOf(Myself))
+  !Kit(ThirdNearestEnemyOf(Myself),INQUISITOR)
+  Global("Dominate","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Dominate","LOCALS",1)
+    ForceSpell(ThirdNearestEnemyOf(Myself),WIZARD_DOMINATION)
+END
+
+IF
+  CheckStatGT(FourthNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  See(FourthNearestEnemyOf(Myself))
+  !HasItemEquiped("HELM06",FourthNearestEnemyOf(Myself))
+  !HasItemEquiped("MISCBC",FourthNearestEnemyOf(Myself))
+  !HasItemEquiped("NPCHAN",FourthNearestEnemyOf(Myself))
+  !HasItemEquiped("REAVER",FourthNearestEnemyOf(Myself))
+  !HasItemEquiped("SHLD25",FourthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SPER07",FourthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H35",FourthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H54",FourthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW2H14",FourthNearestEnemyOf(Myself))
+  !Kit(FourthNearestEnemyOf(Myself),INQUISITOR)
+  Global("Dominate","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Dominate","LOCALS",1)
+    ForceSpell(FourthNearestEnemyOf(Myself),WIZARD_DOMINATION)
+END
+
+IF
+  CheckStatGT(FifthNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  See(FifthNearestEnemyOf(Myself))
+  !HasItemEquiped("HELM06",FifthNearestEnemyOf(Myself))
+  !HasItemEquiped("MISCBC",FifthNearestEnemyOf(Myself))
+  !HasItemEquiped("NPCHAN",FifthNearestEnemyOf(Myself))
+  !HasItemEquiped("REAVER",FifthNearestEnemyOf(Myself))
+  !HasItemEquiped("SHLD25",FifthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SPER07",FifthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H35",FifthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H54",FifthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW2H14",FifthNearestEnemyOf(Myself))
+  !Kit(FifthNearestEnemyOf(Myself),INQUISITOR)
+  Global("Dominate","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Dominate","LOCALS",1)
+    ForceSpell(FifthNearestEnemyOf(Myself),WIZARD_DOMINATION)
+END
+
+IF
+  CheckStatGT(SixthNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  See(SixthNearestEnemyOf(Myself))
+  !HasItemEquiped("HELM06",SixthNearestEnemyOf(Myself))
+  !HasItemEquiped("MISCBC",SixthNearestEnemyOf(Myself))
+  !HasItemEquiped("NPCHAN",SixthNearestEnemyOf(Myself))
+  !HasItemEquiped("REAVER",SixthNearestEnemyOf(Myself))
+  !HasItemEquiped("SHLD25",SixthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SPER07",SixthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H35",SixthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H54",SixthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW2H14",SixthNearestEnemyOf(Myself))
+  !Kit(SixthNearestEnemyOf(Myself),INQUISITOR)
+  Global("Dominate","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Dominate","LOCALS",1)
+    ForceSpell(SixthNearestEnemyOf(Myself),WIZARD_DOMINATION)
+END
+
+IF
+  CheckStatGT(NearestEnemyOf(Myself),1,SAVEVSSPELL)
+  See(NearestEnemyOf(Myself))
+  !HasItemEquiped("HELM06",NearestEnemyOf(Myself))
+  !HasItemEquiped("MISCBC",NearestEnemyOf(Myself))
+  !HasItemEquiped("NPCHAN",NearestEnemyOf(Myself))
+  !HasItemEquiped("REAVER",NearestEnemyOf(Myself))
+  !HasItemEquiped("SHLD25",NearestEnemyOf(Myself))
+  !HasItemEquipedReal("SPER07",NearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H35",NearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H54",NearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW2H14",NearestEnemyOf(Myself))
+  !Kit(NearestEnemyOf(Myself),INQUISITOR)
+  !StateCheck(NearestEnemyOf(Myself),STATE_CHARMED)
+  Global("DireCharm","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("DireCharm","LOCALS",1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_DIRE_CHARM)
+END
+
+IF
+  CheckStatGT(SecondNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  See(SecondNearestEnemyOf(Myself))
+  !HasItemEquiped("HELM06",SecondNearestEnemyOf(Myself))
+  !HasItemEquiped("MISCBC",SecondNearestEnemyOf(Myself))
+  !HasItemEquiped("NPCHAN",SecondNearestEnemyOf(Myself))
+  !HasItemEquiped("REAVER",SecondNearestEnemyOf(Myself))
+  !HasItemEquiped("SHLD25",SecondNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SPER07",SecondNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H35",SecondNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H54",SecondNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW2H14",SecondNearestEnemyOf(Myself))
+  !Kit(SecondNearestEnemyOf(Myself),INQUISITOR)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_CHARMED)
+  Global("DireCharm","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("DireCharm","LOCALS",1)
+    ForceSpell(SecondNearestEnemyOf(Myself),WIZARD_DIRE_CHARM)
+END
+
+IF
+  CheckStatGT(ThirdNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  See(ThirdNearestEnemyOf(Myself))
+  !HasItemEquiped("HELM06",ThirdNearestEnemyOf(Myself))
+  !HasItemEquiped("MISCBC",ThirdNearestEnemyOf(Myself))
+  !HasItemEquiped("NPCHAN",ThirdNearestEnemyOf(Myself))
+  !HasItemEquiped("REAVER",ThirdNearestEnemyOf(Myself))
+  !HasItemEquiped("SHLD25",ThirdNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SPER07",ThirdNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H35",ThirdNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H54",ThirdNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW2H14",ThirdNearestEnemyOf(Myself))
+  !Kit(ThirdNearestEnemyOf(Myself),INQUISITOR)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_CHARMED)
+  Global("Dominate","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("DireCharm","LOCALS",1)
+    ForceSpell(ThirdNearestEnemyOf(Myself),WIZARD_DIRE_CHARM)
+END
+
+IF
+  CheckStatGT(FourthNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  See(FourthNearestEnemyOf(Myself))
+  !HasItemEquiped("HELM06",FourthNearestEnemyOf(Myself))
+  !HasItemEquiped("MISCBC",FourthNearestEnemyOf(Myself))
+  !HasItemEquiped("NPCHAN",FourthNearestEnemyOf(Myself))
+  !HasItemEquiped("REAVER",FourthNearestEnemyOf(Myself))
+  !HasItemEquiped("SHLD25",FourthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SPER07",FourthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H35",FourthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H54",FourthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW2H14",FourthNearestEnemyOf(Myself))
+  !Kit(FourthNearestEnemyOf(Myself),INQUISITOR)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_CHARMED)
+  Global("DireCharm","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("DireCharm","LOCALS",1)
+    ForceSpell(FourthNearestEnemyOf(Myself),WIZARD_DIRE_CHARM)
+END
+
+IF
+  CheckStatGT(FifthNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  See(FifthNearestEnemyOf(Myself))
+  !HasItemEquiped("HELM06",FifthNearestEnemyOf(Myself))
+  !HasItemEquiped("MISCBC",FifthNearestEnemyOf(Myself))
+  !HasItemEquiped("NPCHAN",FifthNearestEnemyOf(Myself))
+  !HasItemEquiped("REAVER",FifthNearestEnemyOf(Myself))
+  !HasItemEquiped("SHLD25",FifthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SPER07",FifthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H35",FifthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H54",FifthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW2H14",FifthNearestEnemyOf(Myself))
+  !Kit(FifthNearestEnemyOf(Myself),INQUISITOR)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_CHARMED)
+  Global("DireCharm","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("DireCharm","LOCALS",1)
+    ForceSpell(FifthNearestEnemyOf(Myself),WIZARD_DIRE_CHARM)
+END
+
+IF
+  CheckStatGT(SixthNearestEnemyOf(Myself),1,SAVEVSSPELL)
+  See(SixthNearestEnemyOf(Myself))
+  !HasItemEquiped("HELM06",SixthNearestEnemyOf(Myself))
+  !HasItemEquiped("MISCBC",SixthNearestEnemyOf(Myself))
+  !HasItemEquiped("NPCHAN",SixthNearestEnemyOf(Myself))
+  !HasItemEquiped("REAVER",SixthNearestEnemyOf(Myself))
+  !HasItemEquiped("SHLD25",SixthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SPER07",SixthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H35",SixthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW1H54",SixthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("SW2H14",SixthNearestEnemyOf(Myself))
+  !Kit(SixthNearestEnemyOf(Myself),INQUISITOR)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_CHARMED)
+  Global("DireCharm","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("DireCharm","LOCALS",1)
+    ForceSpell(SixthNearestEnemyOf(Myself),WIZARD_DIRE_CHARM)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  CheckStatGT(LastAttackerOf(Myself),1,SAVEVSSPELL)
+  !Kit(LastAttackerOf(Myself),INQUISITOR)
+  OR(6)
+    Class(LastAttackerOf(Myself),RANGER_ALL)
+    Class(LastAttackerOf(Myself),FIGHTER_ALL)
+    Class(LastAttackerOf(Myself),PALADIN)
+    Class(LastAttackerOf(Myself),THIEF_ALL)
+    Kit(LastAttackerOf(Myself),BARBARIAN)
+    Kit(LastAttackerOf(Myself),CAVALIER)
+  See(LastAttackerOf(Myself))
+  !StateCheck(LastAttackerOf(Myself),STATE_CHARMED)
+  Global("Hold","LOCALS",0)
+  !HasItemEquiped("FREERING",LastSeenBy(Myself))
+  !HasItemEquiped("ROSSRING",LastSeenBy(Myself))
+  !HasItemEquiped("RING09",LastSeenBy(Myself))
+  !HasItemEquiped("NPSW01",LastSeenBy(Myself))
+  !Gender(LastAttackerOf(Myself),SUMMONED)
+THEN
+  RESPONSE #100
+    SetGlobal("Hold","LOCALS",1)
+    ForceSpell(LastAttackerOf(Myself),WIZARD_HOLD_PERSON)
+END
+
+IF
+  See(WeakestOf)
+  !HasBounceEffects(WeakestOf)
+  !HasImmunityEffects(WeakestOf)
+  OR(4)
+    GlobalLT("FlameArrow","LOCALS",4)
+    GlobalLT("MelfsAcidArrow","LOCALS",3)
+    GlobalLT("ChromaticOrb","LOCALS",3)
+    GlobalLT("MagicMissile","LOCALS",3)
+THEN
+  RESPONSE #100
+    IncrementGlobal("FlameArrow","LOCALS",1)
+    ForceSpell(WeakestOf,WIZARD_FLAME_ARROW)
+  RESPONSE #100
+    IncrementGlobal("MelfsAcidArrow","LOCALS",1)
+    ForceSpell(WeakestOf,WIZARD_MELF_ACID_ARROW)
+  RESPONSE #100
+    IncrementGlobal("ChromaticOrb","LOCALS",1)
+    ForceSpell(WeakestOf,WIZARD_CHROMATIC_ORB)
+  RESPONSE #100
+    IncrementGlobal("MagicMissile","LOCALS",1)
+    ForceSpell(WeakestOf,WIZARD_MAGIC_MISSILE)
+END
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOfType([PC]))
+THEN
+  RESPONSE #100
+    Attack(NearestEnemyOfType([PC]))
+END
+
+IF
+  !Detect([PC])
+  PartyRested()
+THEN
+  RESPONSE #100
+    SetGlobal("Stoneskin","LOCALS",0)
+    SetGlobal("FightPrep","LOCALS",0)
+    SetGlobal("Vocalize","LOCALS",0)
+    SetGlobal("SpellTrigger","LOCALS",0)
+    SetGlobal("Fireshields","LOCALS",0)
+    SetGlobal("DeathSpell","LOCALS",0)
+    SetGlobal("Wilting","LOCALS",0)
+    SetGlobal("Hakeashar","LOCALS",0)
+    SetGlobal("WeaponProtection","LOCALS",0)
+    SetGlobal("Banshee","LOCALS",0)
+    SetGlobal("LowerResist","LOCALS",0)
+    SetGlobal("Malison","LOCALS",0)
+    SetGlobal("Maze","LOCALS",0)
+    SetGlobal("Pierce","LOCALS",0)
+    SetGlobal("Whip","LOCALS",0)
+    SetGlobal("Feeblemind","LOCALS",0)
+    SetGlobal("Finger","LOCALS",0)
+    SetGlobal("ChainLighting","LOCALS",0)
+    SetGlobal("Mordy","LOCALS",0)
+    SetGlobal("Prismatic","LOCALS",0)
+    SetGlobal("Chaos","LOCALS",0)
+    SetGlobal("Sunfire","LOCALS",0)
+    SetGlobal("Contagion","LOCALS",0)
+    SetGlobal("Sphere","LOCALS",0)
+    SetGlobal("Hopelessness","LOCALS",0)
+    SetGlobal("Dominate","LOCALS",0)
+    SetGlobal("DireCharm","LOCALS",0)
+    SetGlobal("Hold","LOCALS",0)
+    SetGlobal("FlameArrow","LOCALS",0)
+    SetGlobal("MelfsAcidArrow","LOCALS",0)
+    SetGlobal("ChromaticOrb","LOCALS",0)
+    SetGlobal("MagicMissile","LOCALS",0)
+    SetGlobal("Trap","LOCALS",0)
+END
+

@@ -1,0 +1,388 @@
+@0    = ~Improved Asylum Mod for BG2:ToB~
+@1    = ~Long Sword~
+@2    = ~Bard's Bane +5~
+@3    = ~Bard's Bane +5
+This weapon was forged by the Zhentarium with the intention of being used in a conflict with the Harpers.  The weapon was never used, however, as the predicted war for which Bard's Bane was forged never occured.  It is unknown how this weapon left the Zhentarium Stronghold, but it is predicted that a thief stole the weapon after watching a very poor production of 'Midsummer Night's Dream.'  This theory has a basis, as one of the most charismatic performers was found dead, all traces of his formerly comely visage gone.  The actor recieved a typical beggar's funeral.
+
+STATISTICS
+
++5 to THAC0
+Protection from Bards
++10% Magic Resistance
+Wielder is Immune to Flame Arrow
+Damage:  1d8+5
+Speed Factor:  0
+Drains 3 Charisma Each Hit
+
+Not Useable by:
+ Mage
+ Cleric
+ Bard
+ Druid~
+@4    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords.  In many cases, the long sword has a single-edged blade. There is no single version of the long sword; the design and length vary from culture to culture, and may vary within the same culture depending on the era.  Among the most common characteristics of all long swords is their length, which ranges from 35 inches to 47 inches.  In the latter case, the blade is known to take up 40 inches of the total length.  Most long swords have a double-edged blade and a sharp point at the tip.  Despite the tip, the long sword is designed for slashing, not thrusting. 
+
+STATISTICS:
+
+Damage:  1D8
+Damage type:  slashing
+Weight: 4
+Speed Factor: 5
+Proficiency Type: Long Sword
+Type:  1-handed
+Requires: 6 Strength
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+@5    = ~Heart of Braldain +5~
+@6    = ~Heart of Braldain +5
+Braldain was an infamous dark elf necromancer who happened to have a very painful history.  He achieved great power while travelling the continents, but few knew the pain that his heart bore.
+
+Braldain had long been tormented by the memory of multiple elven women and that proved to be his ultimate downfall.  Eventually, he began torturing the few maidens that he found around his hometown in order to acquire their life energies to power the greatest of all the necromantic spells.
+
+What happened to cause his downfall is all pure speculation, but rumor has it that he was involved in a quest for power when he simply disappeared.  This sword is all that has been discovered of his legacy, and what a legacy it is.  This sword contains the essence of the necromancer's dark heart, still scarred with the memories of the horrible tortures inflicted upon all those women.
+
+STATISTICS
+
+Wielder is Immune to Poison
++5 to THAC0
+Damage:  1d8+5
++5 Electrical Damage
++5 Cold Damage
++5 Fire Damage
++5 Acid Damage
+10% Chance of Draining 4 levels each hit
+1/day:  Wail of the Banshee
+
+Not useable by:
+ Mage
+ Cleric
+ Druid~
+@7    = ~Chainmail~
+@8    = ~Black Swan Armor~
+@9    = ~Chain mail is made of interlocking metal rings.  It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows.
+
+STATISTICS:
+
+Armor Class: 5
+Weight: 40
+Requires: 8 Strength
+Not Usable By:
+ Druid
+ Mage
+ Thief~
+@10   = ~Black Swan Armor
+Forged in the depths of the frozen north, the Black Swan Armor has been an object of admiration and dread for ages.  Entire tribes of barbarian hordes have fought and been destroyed over this one artifact.  This armor bestows great resistances upon its wearer, but whosoever possesses it will likely have to fight to keep it.
+
+STATISTICS
+
+AC:  -1
++20 Fire Resistance
++20 Cold Resistance
++20 Electrical Resistance
++20 Acid Resistance
++20 Magic Resistance
+Wearer is Immune to Level 1 Spells
+
+Not Useable by:
+ Mage
+ Thief
+ Druid~
+@11   = ~Breudayael's Wedding Ring~
+@12   = ~Breudayael's Wedding Ring
+This ring was a wedding gift from Breudayael D'Sorpal upon marriage to Anastacia.  The great mage forged it himself, and it contains the essence of one of the greatest emotions known to man.  Breudayael is no fool, however.  He created the ring specifically for this one elf, and it may prove unwise for anyone else to wear it.
+
+STATISTICS
+
++4 bonus to AC
++50 Cold Resistance
+Wearer is immune to Hold, Stun, and Charm effects
+Wearer cannot be imprisoned~
+@13   = ~Ring~
+@14   = ~Bane of Myrkul~
+@15   = ~A ring is a small band of precious metal that is used as jewelry.  Some rare rings have had enchantments placed upon them that confer various magical abilities.  These rings are highly sought after, especially by those of the adventuring profession.~
+@16   = ~Bane of Myrkul
+This ring was issued to all the members of a secretive cult of Conjurers who sought the overthrow of a tyrannical cadre of Myrkul priests.  This ring is now feared by all of his followers and indeed could be powerful enough to allow the wearer to even take on the god himself and have a chance at victory.
+
+STATISTICS
+
+Wearer is Immune to Level Drain
+Wearer is Immune to any form of Death Magic~
+@17   = ~Helmet~
+@18   = ~Helm of Mental Protection~
+@19   = ~This class of open-face helmet, made of reinforced leather or metal, covers most of the head, save the face and neck.  These helmets commonly provide protection for the nose.
+
+STATISTICS:
+
+Armor Class Bonus:  None
+Special:  Protects Against Critical Hits
+Weight: 2
+Not Usable By:
+Mage
+Bard
+Thief~
+@20   = ~Helm of Mental Protection
+The story behind this helmet is not grand, nor is it interesting.  In fact, the actual origins of this helm have been lost in time.  It's great if its owner is going to fight enchanters, though.
+
+STATISTICS
+
++1 AC
++1 Wis
+Wearer is immune to Charm
+Wearer is immune to Confusion~
+@21   = ~Axe of the Elven Scalp +5~
+@22   = ~Axe of the Elven Scalp +5
+This axe was forged by the dwarven people in Dorn's Deep for use against the elves who live in the Shattered Hand.  The weapon never saw use, however, as an adventuring party intervened and made peace between the two clans.  In gratitude or hatred, the dwarves bestowed this axe onto the fighter that travelled with the party.
+
+STATISTICS
+
++5 THAC0
++50% Magic Resistance
+Damage:  1d8+5
+Speed Factor:  5
+10% Chance of Decapitation on each Hit
+
+Not useable by:
+ Cleric
+ Mage
+ Thief
+ Druid~
+@23   = ~Runed Defender Shield~
+@24   = ~Runed Defender Shield
+This is a custom forged shield made by Dwarven Hands.  Thordek Broadshield had it constructed by a master dwarven smith to assist him on his quest.  The runes that have been branded on the shield carry the strongest of dwarven enchantments.
+
+STATISTICS
+
++5 AC
++20% Magic Resistance
++30% Fire Resistance
++30% Cold Resistance
++45% Acid Resistance
+User is Immune to Level Drain
+
+Requires 9 Strength to Use
+
+Not useable by:
+ Bard
+ Mage
+ Thief
+ Druid~
+@25   = ~Thordek's Full Plate~
+@26   = ~Thordek's Full Plate
+This is Thordek's suit of Full Plate Armor.  A quick glance over it reveals that the armor was obviously only intended for one wearer, as it does not resize itself to fit you.  It offers protection unsurpassed by any armor found on the surface of Faerun.
+
+STATISTICS
+
+AC:  -4
+Wearer is permanently under the effect of Improved Haste
+
+Not useable by:
+ Anyone who is not a good or neutral aligned dwarf that is usually able to wear plate armor~
+@27   = ~Bronze Cloak~
+@28   = ~This appears to be a cloak constructed of interlocking pieces of a heavy metal.~
+@29   = ~Bronze Cloak
+This is more or less, your standard run of the mill cloak, except that it is constructed out of interlocking hinged blocks of bronze.  This should make backstabbing the wearer nigh impossible.
+
+STATISTICS
+
++1 AC
+Wearer is Immune to Backstab
+
+Not useable by:
+ Bard
+ Mage
+ Thief~
+@30   = ~Jade Dwarven Helm~
+@31   = ~Jade Dwarven Helm
+The dwarves have a remarkable passion for jewels, and many of their alchemists have found ways to extract the magic essence present in these jewels and craft wonderous items out of them.  This helm is one of those items.  Constructed of solid metal with jade decorations, the helm bestows some resistance to mental attacks upon its wearer.
+
+STATISTICS
+
+Immune to Critical Hits
++50% Fire Resistance
++50% Electrical Resistance
+Immune to Charm
+
+Only Useable by:
+ Dwarves~
+@32   = ~Staff of Zoltan~
+@33   = ~Staff of Zoltan
+Zoltan was a knight, not a mage.  He commissioned this to be made for Alexia, an elf in his adventuring party whose heart he so dearly wanted to win.  He failed to win her over with this staff, but as she was driven by an insatiable lust for power, she kept this item anyway.
+
+STATISTICS
+
+-1 to Cast Time
++50% Cold Resistance
+Protection from Evil
+
+THAC0:  +5 Bonus
+Damage:  1d8+1
+
+Only useable by:
+ Mage (single-, multi-, and dual-class)~
+@34   = ~Protection from Evil~
+@35   = ~Robe of the Moon and Stars~
+@36   = ~Robe of the Moon and Stars
+This is truly a nice robe.  It is black, decorated with images of crescent moons and bright yellow stars.  The robe is not merely meant for showing, as it manages to teach some of the secrets of magic to its wearer.  As with all robes of this type, it can only be worn by mages.
+
+STATISTICS
+
++1 Charisma
++4 First Level Spells per Day
++2 Second Level Spells per Day
++1 Third Level Spell per Day
+
+Only useable by:
+ Mage (single-, multi-, and dual-class)~
+@37   = ~Ring of Truth~
+@38   = ~Ring of Truth
+Karlat was a highly inteligent, but somewhat unwise mage.  As he was driven deeper into the maddness that had been his constant companion throughout life, he began creating this ring in an attempt to discover the 'meaning of life.'  The ring is incomplete in its final task, but even in its unfinished state, it helps the wearer to learn long hidden secrets.
+
+STATISTICS
+
++3 Wisdom Bonus
++1 Level 6-9 Spells~
+@39   = ~Platinum Ioun Stone~
+@40   = ~Platinum Ioun Stone
+The powerful enchantments on this ioun stone make it a treasure eagerly sought after by wizards and mages.
+
+STATISTICS
+
+Wearer gains Immunity to Level Drain
++2 Charisma
++1 Level 1-9 Wizard Spells per Day
+
+Usable by:
+ Mage
+ Bard~
+@41   = ~Staff of the True Magi~
+@42   = ~Staff of the True Magi
+This staff was created by the great archmage Rastor in an effort to bolster the power of his magic in combat.  While the forge was a success, Rastor soon created a better staff so he gave this to a good friend of his.  How it has ventured from there to here is seemingly unknown.
+
+STATISTICS
+
+Protection from Evil on the Wielder
+Wielder is Permanently under the effect of the "Bless" spell
+Immunity to Fear
+Invisibility
+
+1/day:  Spell Trap
+
+THAC0:  +5 Bonus
+Damage:  1d8+1
+
+Not useable by:
+ Anyone who is not a mage~
+@43   = ~Robe of Mystra~
+@44   = ~Robe of Mystra
+This robe was granted to Breudayael by Mystra, the goddess of magic.  He had long been one of her most fervent disciples.
+
+Sages speculate that the mage is infact one of the children of Mystra as he has had a great propensity for magic since birth.  This robe is truly a gift that any practicioner of the arts would sacrifice much to acquire.
+
+STATISTICS
+
+Immune to Timestop
+Immune to Level 6 and lower spells
+Immune to Death Magic or Instant Death Effects of Items
+Immune to Fear
+Immune to Charm
+Immune to Confusion
+Immune to Imprisonment
++75% Magic Resistance
++40% Acid Resistance
++40% Fire Resistance
++40% Cold Resistance
++40% Electrical Resistance
+Immune to +3 and lower weapons
+Adds +4 Level 9 Spells per day
+
+AC:  4
+
+Only useable by:
+ Neutral-aligned mage~
+@45   = ~Mage Robe~
+@46   = ~Since the age of Netheril, mages have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a mage. Due to their magical heritage, however, only single-, dual-, and multi-class mages may wear these enchanted robes.~
+@47   = ~D'Sorpal Circlet~
+@48   = ~D'Sorpal Circlet
+This is the enchanted circlet of House D'Sorpal.  Although it is rare for a male in drow society to get such an heirloom, Breudayael was blessed with such power that any that dared to try to take the circlet from him met the same fate as the matron of his house.  Few drow enjoy the experience of being a fly in a city full of spiders.
+
+STATISTICS
+
++3 Level 1-7 Wizard Spells
+
+Only useable by:
+ Drow~
+@49   = ~Rastor's Ring of Mage Shielding~
+@50   = ~Rastor's Ring of Mage Shielding
+This is a ring commissioned by the archmage Rastor to protect him from the spells of his enemies as he traversed the planes.  He later gave it to an apprentice and its history from then on is unknown.
+
+STATISTICS
+
+Wearer is Immune to Transmutation magic
+Wearing is Immune to any Offensive Spell targetted upon the wearer.
+
+Only useable by:
+ Mage (single-, multi-, and dual-class)~
+@51   = ~Ring of Knowledge~
+@52   = ~Ring of Knowledge
+Some unknown mage created this.  He was later killed by Bill the Dervish who wanted this ring as a gift to his wife.
+
+STATISTICS
+
++3 Level 3-6 Mage Spells
++1 Wisdom
+
+Only useable by:
+ Mage (single-, multi-, and dual-class)~
+@53   = ~Anastacia~
+@54   = ~Thordek~
+@55   = ~Drusilia~
+@56   = ~Breudayael~
+@57   = ~Kargak the Destroyer~
+@58   = ~Lord Karadin the Cursed~
+@59   = ~Noble Umber Hulk~
+@60   = ~Arianna~
+@61   = ~Sanar~
+@62   = ~Berserk Rage~
+@63   = ~Chain Contingency~
+@64   = ~Spell Trigger~
+@65   = ~Spell Trigger-True Sight~
+@66   = ~Spell Trigger-Protection from Magic Weapons~
+@67   = ~Spell Trigger-Protection from Magic Energy~
+@68   = ~Chain Contingency-Spell Immunity: Abjuration~
+@69   = ~Chain Contingency-Spell Immunity: Divination~
+@70   = ~Chain Contingency-Mislead~
+@71   = ~Spell Sequencer~
+@72   = ~Spell Sequencer-Fire Shield: Red~
+@73   = ~Spell Sequencer-Fire Shield: Blue~
+@74   = ~Spell Sequencer-Summon Monster I~
+@75   = ~Minor Spell Sequencer~
+@76   = ~Minor Spell Sequencer-Magic Missile~
+@77   = ~Chain Contingency-Abi Dhalzim's Horrid Wilting~
+@78   = ~Chain Contingency-Stoneskin~
+@79   = ~Chain Contingency-Improved Mantle~
+@80   = ~Chain Contingency-Blur~
+@81   = ~Chain Contingency-Absolute Immunity~
+@82   = ~Spell Trigger-Shadow Door~
+@83   = ~Spell Trigger-Spell Shield~
+@84   = ~Prepare to meet your end!~
+@85   = ~Spell Trigger-Mislead~
+@86   = ~Spell Trigger-Teleport Field~
+@87   = ~Spellhold Lich~
+@88   = ~Improved Player Scripts~
+@89   = ~Rastor's Improved Cleric Script~
+@90   = ~This is a universal script for clerics.  The cleric will ensure that your party is in reasonable health before casting any offensive spells and won't waste spells on enemies that will be unaffected by them.  The cleric also won't cast spells on weak enemies.~
+@91   = ~Rastor's Improved Mage Script~
+@92   = ~This script implements intelligent spell-casting for mages.  It is primarily based on the inteligent enemy mages scripts but has been modified to work with players.  This script actually will have your mage casting high level spells at worthy enemies.  The mage will not waste his best spells on weak enemies, nor will he waste Area-of-Effect spells when there is only one or two enemies in sight.~
+@93  = ~Crazy Mage~
+@94  = ~Vlis'tiara~
+@95  = ~Drow Torturer~
+@96  = ~Troll~
+@97  = ~Detectable Spells (Required for the Other Components)~
+@98  = ~Mod Requirements~
+@99  = ~Improved Asylum is already installed!~
+@100 = ~Copying over a dummy file so that other mods can see that this one is installed.~
+@101 = ~Spellhold Lich is already installed.~
+@102 = ~Copying over a dummy file so that other mods can see that this one is installed.~
+@103 = ~Improved Player Scripts is already installed.~
+@104 = ~Copying over a dummy file so that other mods can see that this one is installed.~

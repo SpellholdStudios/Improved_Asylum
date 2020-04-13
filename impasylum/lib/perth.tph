@@ -1,0 +1,84 @@
+/* Perth the Adept Upgrade Macros
+ *
+ * This file contains a series of macros that are designed to upgrade Perth the Adept (the mage that the player fights in order to get a wardstone to enter the Asylum). It doesn't make a lot of sense for the player to fight a very easy
+ * mage to get access to the Asylum which is significantly more difficult after installing the other components in the mod. This will be an optional component and a part of the project to make the mod fully customizable.
+ *
+ * Ultimately, there are two ways to do the fight - or there will be in the final version. In one version, Perth will have two apprentices and in the other, he will not.
+ *
+ * Additionally, accomodations need to be made for players that use SCS2. This should be presumed to be the majority of players that enjoy combat enhancing mods.
+ */
+
+DEFINE_PATCH_MACRO ~Upgrade_Perth_HPResist~ BEGIN
+ READ_SHORT 0x0024 "currenthps"
+ READ_SHORT 0x0026 "maxhps"
+ READ_BYTE 0x0059 "resistfire"
+ READ_BYTE 0x005a "resistcold"
+ READ_BYTE 0x005b "resistelectric"
+ READ_BYTE 0x005c "resistacid"
+ READ_BYTE 0x005d "resistmagic"
+ READ_BYTE 0x0234 "level"
+
+ // In the original game, Perth is a level 20 mage. That seems just fine.
+ PATCH_IF NOT ("%level%" = 0x14) BEGIN
+  WRITE_BYTE 0x0234 0x14
+ END
+
+ // Raise Perth to 96 hitpoints, similarly to all other high level mages. If some other mod raised his hitpoints above that, then leave the higher value.
+ PATCH_IF ("%currenthps%" <= 0x60) BEGIN
+  WRITE_SHORT 0x0024 0x60
+ END
+ PATCH_IF ("%maxhps%" <= 0x60) BEGIN
+  WRITE_SHORT 0x0026 0x60
+ END
+
+ // Vanilla Perth has no resistances at all. He is a Cowled Wizard. The Cowled Wizards are expected to be magical enforcers and enforce the ban on magical use in Athkatla. He really should have some protection against magic.
+ PATCH_IF ("%resistmagic%" <= 0x14) BEGIN
+  WRITE_BYTE 0x005d 0x14
+ END
+ PATCH_IF ("%resistfire%" <= 0x1E) BEGIN
+  WRITE_BYTE 0x0059 0x1e
+ END
+ PATCH_IF ("%resistacid%" <= 0x64) BEGIN
+  WRITE_BYTE 0x005c 0x64
+ END
+ PATCH_IF ("%resistelectric%" <= 0xa) BEGIN
+  WRITE_BYTE 0x005b 0xa
+ END
+END
+
+// Perth is a level 20 mage who has made absolutely horrible spell picks. We'll fix that up now.
+// For some reason, Perth also has a large selection of innate spells although these are also poorly selected.
+// If I was only interested in upgrading the AI then I would allow these innate spells to remain. But, my concern is making the fight harder. I'll keep the number of spells that he has on each level the same but change out the
+// bad spells for better ones.
+//
+// His current spells won't actually be removed by this mod. I'll simply add the spells that I want him to have and the script will only include these spells. Therefore, he won't have too many spells for his level from the
+// players' perspective.
+
+DEFINE_PATCH_MACRO ~Upgrade_Perth_Spells~ BEGIN
+ LOCAL_SET "wilting" = 2
+ /* Perth has 3 level 9 spells as a level 20 mage. We'll keep that the same, but give him better spells. */
+ ADD_KNOWN_SPELL ~spwi909~ #8 ~wizard~ // Time Stop
+ PATCH_IF ("%perth_hla%" = 1) BEGIN // If the player allows HLAs for Perth
+  ADD_KNOWN_SPELL ~spwi925~ #8 ~wizard~ // Comet
+ END ELSE BEGIN
+  ADD_KNOWN_SPELL ~spwi911~ #8 ~wizard~ // Meteor Swarm
+ END
+ ADD_KNOWN_SPELL ~spwi910~ #8 ~wizard~ // Imprisonment
+
+ /* Perth has 4 level 8 spells and 4 level 8 spells as innates. We'll give him a total of 4 level 8 spells. Well selected ones should be a good challenge for players of this level.
+ WHILE ("wilting" > 2) BEGIN
+  ADD_KNOWN_SPELL ~spwi812~ #7 ~wizard~ // Abi Dalzim's Horrid Wilting
+  SET ("wilting = "%wilting%" - 1)
+ END
+ ADD_KNOWN_SPELL ~spwi804~ #7 ~wizard~ // Simulacrum
+ ADD_KNOWN_SPELL ~spwi898~ #7 ~wizard~ // Wizard: NPC Symbol Stun
+
+ /* Perth has 4 level 7 spells and 4 level 7 spells as innates. We'll give him a total of 4 level 7 spells. */
+ ADD_KNOWN_SPELL ~spwi719~ #6 ~wizard~ // Summon Hakeashar - This is a great spell to use against PC mages
+ ADD_KNOWN_SPELL ~spwi704~ #6 ~wizard~ // Ruby Ray of Reversal
+ ADD_KNOWN_SPELL ~spwi716~ #6 ~wizard~ // Mordenkainen's Sword
+ // Khelben's Warding Whip is likely to be a good dispel at this level since the player probably won't have anything above Level 8.
+ ADD_KNOWN_SPELL ~spwi705~ #6 ~wizard~ // Khelben's Warding Whip
+
+ /* Perth has 5 level 6 spells and 5 level 6 spells as innates. We'll give him a total of 5 level 6 spells. */
+

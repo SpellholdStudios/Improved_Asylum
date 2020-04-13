@@ -1,0 +1,37 @@
+IF
+ OnCreation()
+THEN
+ RESPONSE #100
+  EquipMostDamagingMelee()
+END
+
+IF
+ Allegiance("R#VLIST",ENEMY)
+ See(StrongestOf)
+ OR(2)
+  Dead("R#EFEMALE")
+  Dead("R#EMALE")
+THEN
+ RESPONSE #100
+  AttackReevaluate(StrongestOf,30)
+END
+
+IF
+ Allegiance("R#VLIST",ENEMY)
+ OR(2)
+  Dead("R#EFEMALE")
+  Dead("R#EMALE")
+THEN
+ RESPONSE #100
+  AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+ Allegiance("R#VLIST",ENEMY)
+ OR(2)
+  See("R#EFEMALE")
+  See("R#EMALE")
+THEN
+ RESPONSE #100
+  AttackReevaluate(LastSeenBy(Myself),30)
+END

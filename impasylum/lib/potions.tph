@@ -1,0 +1,4 @@
+// Potion Handling Script
+// Required for scripts that use potions
+
+APPEND ~SHOUTIDS.IDS~ ~999 NEEDPOTION~ UNLESS ~NEEDPOTION~
