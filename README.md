@@ -1,3 +1,8 @@
+<hr>
+
+:warning: **The maintenance and support of this project has been moved to a [new repository](https://github.com/Spellhold-Studios/Improved-Asylum).**
+
+<hr><br>
 
 ![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/Improved_Asylum?include_prereleases&color=darkred)<a name="top" id="top"> </a>
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20Mac%20%7C%20linux&color=informational)
@@ -82,7 +87,7 @@ The installer includes the following components.<br /><br />
 
 This component is required in order for the others to function correctly.
 
-By default, Baldur’s Gate II’s AI engine is remarkably simple. This component changes all of that. Detectable Spells does not include any game play per se, nor does it include anything that players are going to notice in the game. What it does do is enhances the AI capabilities of Baldur’s Gate II. This is necessary for the other components in the mod to function correctly. The other components in the mod as well as the harder fights and improved combat AI will not work if you do not install this component.
+By default, Baldurâ€™s Gate IIâ€™s AI engine is remarkably simple. This component changes all of that. Detectable Spells does not include any game play per se, nor does it include anything that players are going to notice in the game. What it does do is enhances the AI capabilities of Baldurâ€™s Gate II. This is necessary for the other components in the mod to function correctly. The other components in the mod as well as the harder fights and improved combat AI will not work if you do not install this component.
 
 This is the same Detectable Spells enhancement that is found in many other combat-enhancing mods so if you have one of those installed then this may not be necessary. Please install it if you are not sure. There will not be any problems if you do.
 
@@ -152,7 +157,7 @@ Let's face it, the original scripts that Bioware made for the game seem more aki
 #### Version 1.0.0
 
 - Fixed a bug that was causing some people to have problems installing the mod.
-- Expanded French translation to include several lines (thanks to Mornagest of d’Oghmatiques).
+- Expanded French translation to include several lines (thanks to Mornagest of dâ€™Oghmatiques).
 - Changed mod version naming scheme.
 
 ## 
